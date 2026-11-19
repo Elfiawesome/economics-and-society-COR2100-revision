@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinite Practice — E&amp;S Final</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23f3f0e8' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><strong>E&amp;S</strong><span>Final Year / Study System</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="notes.html">Notes</a>
+        <a class="active" href="practice.html">Infinite Practice</a>
+        <a href="exam.html">Exam Simulator</a>
+        <a href="cheatsheet.html">Formula Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="page-head">
+      <div class="eyebrow" style="color:var(--muted); margin-bottom:10px;">Practice mode</div>
+      <h1>Infinite questions.</h1>
+      <p>Every numerical question is generated fresh: new values, companies, countries and scenarios. Theory and application questions are mixed in. Answer, reveal the full solution, and the site tracks your weak topics locally in your browser.</p>
+    </div>
+
+    <div class="practice-layout">
+      <aside class="control-panel" aria-label="Practice controls">
+        <h3>Build a question</h3>
+        <div class="field">
+          <label for="topicSelect">Topic</label>
+          <select id="topicSelect">
+            <option value="mixed">Mixed — all 12 topics</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="typeSelect">Question type</label>
+          <select id="typeSelect">
+            <option value="mixed">Mixed</option>
+            <option value="mcq">Multiple choice</option>
+            <option value="written">Written</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="difficultySelect">Difficulty</label>
+          <select id="difficultySelect">
+            <option value="mixed">Mixed</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div class="btn-row">
+          <button class="btn primary" id="newBtn" type="button">New question</button>
+          <button class="btn small" id="resetBtn" type="button">Reset stats</button>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat"><div class="k">Attempted</div><div class="v" id="statAttempts">0</div></div>
+          <div class="stat"><div class="k">Accuracy</div><div class="v" id="statAccuracy">—</div></div>
+          <div class="stat"><div class="k">Streak</div><div class="v" id="statStreak">0</div></div>
+        </div>
+
+        <div class="topic-progress" id="topicProgress"></div>
+        <p class="hint" style="margin-top:14px; margin-bottom:0;">Shortcuts: <kbd>1</kbd>–<kbd>4</kbd> choose, <kbd>Enter</kbd> check, <kbd>N</kbd> next.</p>
+      </aside>
+
+      <section class="q-stage" id="qStage" aria-live="polite">
+        <div class="q-card">
+          <div class="q-title">Generator ready</div>
+          <div class="q-prompt">
+            <p>Pick a topic and press <strong>New question</strong>. If you leave it on Mixed, the generator will pull from every chapter, including numerical, theory and application questions.</p>
+            <p class="muted">The first question loads automatically.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Infinite practice · values are generated locally · progress is saved in this browser</span>
+    <span><a href="exam.html">Ready for the full paper?</a></span>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/bank-micro-mcq.js"></script>
+  <script src="js/bank-macro-mcq.js"></script>
+  <script src="js/bank-written.js"></script>
+  <script src="js/gen-foundations.js"></script>
+  <script src="js/gen-demand.js"></script>
+  <script src="js/gen-consumer-costs.js"></script>
+  <script src="js/gen-monopoly.js"></script>
+  <script src="js/gen-government.js"></script>
+  <script src="js/gen-macro.js"></script>
+  <script src="js/gen-institutions-policy.js"></script>
+  <script src="js/practice.js"></script>
+</body>
+</html>

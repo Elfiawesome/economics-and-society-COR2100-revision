@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam Simulator — E&amp;S Final</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23f3f0e8' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><strong>E&amp;S</strong><span>Final Year / Study System</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="notes.html">Notes</a>
+        <a href="practice.html">Infinite Practice</a>
+        <a class="active" href="exam.html">Exam Simulator</a>
+        <a href="cheatsheet.html">Formula Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell exam-shell">
+    <section id="startScreen">
+      <div class="exam-start">
+        <div class="page-head" style="border-bottom:0; padding-top:12px;">
+          <div class="eyebrow" style="color:var(--muted); margin-bottom:10px;">Exam mode</div>
+          <h1>Two hours. Fifty questions.</h1>
+          <p>The simulator builds a balanced paper from all 12 topics: 25 MCQs and 25 written questions. MCQs are marked automatically. Written answers are revealed with a model answer and a marking checklist, then you self-mark out of 2. Every question is worth 2 marks, so the full paper is out of 100.</p>
+        </div>
+
+        <div id="resumeArea"></div>
+
+        <div class="exam-options">
+          <div class="exam-option">
+            <div class="eyebrow" style="color:var(--accent);">Full paper</div>
+            <h4>25 MCQ + 25 written</h4>
+            <p>2 hours. Balanced across all topics. The closest thing to the real format.</p>
+          </div>
+          <div class="exam-option">
+            <div class="eyebrow" style="color:var(--accent);">Quick drill</div>
+            <h4>10 MCQ + 5 written</h4>
+            <p>40 minutes. Same mixing rules, shorter sit. Good for a weeknight.</p>
+          </div>
+          <div class="exam-option">
+            <div class="eyebrow" style="color:var(--accent);">Marking</div>
+            <h4>2 marks per question</h4>
+            <p>MCQ auto-marked. Written self-marked 0 / 1 / 2 using the model answer and checklist.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-bottom:26px;">
+          <button class="btn primary" id="startFull" type="button">Start full paper</button>
+          <button class="btn" id="startQuick" type="button">Start quick drill</button>
+          <a class="btn ghost" href="practice.html">Practice a single topic first</a>
+        </div>
+
+        <div class="split">
+          <div class="callout exam" style="margin-top:0;">
+            <span class="label">Before you start</span>
+            <p>The timer starts immediately and keeps running. You can move between questions, flag them, and return. Answers are saved in this browser, so a reload will offer to resume.</p>
+          </div>
+          <div class="callout trap" style="margin-top:0;">
+            <span class="label">Marking honesty</span>
+            <p>For written questions, do not award yourself full marks for a vague answer. The checklist is deliberately specific: formula, substitution, result, interpretation. Partial = 1, missed = 0.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="examScreen" hidden>
+      <div class="exam-bar">
+        <div class="exam-bar-inner">
+          <div class="btn-row">
+            <span class="exam-progress" id="examLabel">Full paper</span>
+            <span class="timer" id="timer">2:00:00</span>
+          </div>
+          <div class="btn-row">
+            <span class="exam-progress" id="answeredLabel">0 / 50 answered</span>
+            <button class="btn small" id="submitTop" type="button">Submit paper</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-layout">
+        <div class="exam-main" id="examMain" aria-live="polite"></div>
+        <aside class="exam-nav-panel">
+          <h4>Question navigator</h4>
+          <div class="qnav" id="qnav"></div>
+          <div class="legend">
+            <span><i class="g"></i> Answered</span>
+            <span><i class="f"></i> Flagged</span>
+            <span><i class="c"></i> Current</span>
+          </div>
+          <div style="margin-top:14px; border-top:1px solid var(--soft-line); padding-top:12px;">
+            <button class="btn small" id="flagBtn" type="button">Flag question</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="resultsScreen" hidden>
+      <div id="resultsArea"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Exam simulator · generated locally · written section is self-marked</span>
+    <span><a href="cheatsheet.html">Formula sheet</a></span>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/bank-micro-mcq.js"></script>
+  <script src="js/bank-macro-mcq.js"></script>
+  <script src="js/bank-written.js"></script>
+  <script src="js/gen-foundations.js"></script>
+  <script src="js/gen-demand.js"></script>
+  <script src="js/gen-consumer-costs.js"></script>
+  <script src="js/gen-monopoly.js"></script>
+  <script src="js/gen-government.js"></script>
+  <script src="js/gen-macro.js"></script>
+  <script src="js/gen-institutions-policy.js"></script>
+  <script src="js/exam.js"></script>
+</body>
+</html>

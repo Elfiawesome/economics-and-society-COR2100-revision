@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reorganized Notes — E&amp;S Final</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23f3f0e8' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><strong>E&amp;S</strong><span>Final Year / Study System</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="notes.html">Notes</a>
+        <a href="practice.html">Infinite Practice</a>
+        <a href="exam.html">Exam Simulator</a>
+        <a href="cheatsheet.html">Formula Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="notes-layout">
+      <aside class="notes-sidebar" id="notesSidebar">
+        <div class="sidebar-title">Contents</div>
+        <div class="sidebar-actions">
+          <button class="btn small" id="expandAll" type="button">Expand all</button>
+          <button class="btn small" id="collapseAll" type="button">Collapse all</button>
+        </div>
+        <input type="text" id="tocSearch" placeholder="Filter contents…" aria-label="Filter contents">
+        <button class="btn small menu-toggle" id="menuToggle" type="button" style="width:100%; margin-bottom:10px;">Show / hide contents</button>
+        <ul class="toc" id="toc"></ul>
+        <button class="btn small" id="printBtn" type="button" style="width:100%; margin-top:14px;">Print notes</button>
+        <p class="hint" style="margin-top:12px; margin-bottom:0;">Sources: Week 1–11 slides, weekly quizzes, Week 8 midterm practice, Week 12 final review and transcript. Admin slides removed.</p>
+      </aside>
+
+      <article class="notes-main" id="notesMain">
+        <div class="notes-intro">
+          <div class="eyebrow" style="color:var(--muted); margin-bottom:10px;">Reorganized notes · all 12 topics</div>
+          <h1>The whole course,<br>in causal order.</h1>
+          <p class="lede">This is not a transcript of the slides. It is the course rebuilt so that each idea appears once, in the place where it is used. Week 3's elasticity is now inside demand. Week 4's monopoly is merged with every final-review problem. Week 7–10 is one growth story. Week 11 is one policy framework: output, jobs, inflation.</p>
+          <div class="callout exam">
+            <span class="label">How to use this page</span>
+            <p>Read a chapter, then open <a href="practice.html">Infinite Practice</a> and select that topic. For the final two days, sit the <a href="exam.html">25 + 25 exam simulator</a> and live in the <a href="cheatsheet.html">formula sheet</a>. The notes are the explanation; the generator is the retrieval practice.</p>
+          </div>
+          <div class="split">
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Written-answer template</span>
+              <ol class="clean-list" style="margin-bottom:0;">
+                <li><strong>Identify</strong> the concept or formula.</li>
+                <li><strong>Substitute</strong> the numbers or the graph points.</li>
+                <li><strong>State</strong> the result with units.</li>
+                <li><strong>Interpret</strong> in one sentence: what does it mean, and why does it matter?</li>
+              </ol>
+            </div>
+            <div class="callout trap" style="margin-top:0;">
+              <span class="label">The five words that cost marks</span>
+              <p><strong>Units. Per unit. Total. Real. Nominal.</strong> Underline them in the question before calculating. Most midterm errors were reading errors, not economics errors.</p>
+            </div>
+          </div>
+          <div class="callout note">
+            <span class="label">Course conventions</span>
+            <p>Percentage changes use the <strong>initial value</strong> as the base, as in the weekly quizzes. Profit maximisation is <strong>MR = MC</strong>; price is then read from demand. GDP deflator = nominal/real × 100. PPP uses the price ratio. The Rule of 70 uses the growth rate in percent. Long-run competitive equilibrium is P = MC = ATC.</p>
+          </div>
+        </div>
+
+        <!-- ================= CHAPTER 1 ================= -->
+        <section class="chapter" id="ch-foundations">
+          <span class="week-chip">Week 1 · The Principles and Practice of Economics</span>
+          <h2><span class="ch-no">Chapter 01</span>Thinking Like an Economist</h2>
+          <p class="chapter-lede">Economics is the study of choices under scarcity and their effects on others. The three tools are optimization, equilibrium and empiricism. The one number you must never get wrong is opportunity cost.</p>
+
+          <h3 id="s1-1">1.1 Economics, scarcity and economic agents</h3>
+          <p><strong>Economics</strong> studies how people and societies make choices when resources are limited, and how those choices affect others. The unifying feature is <em>choice</em>, not money.</p>
+          <p>An individual choice can become a societal issue. One person's smoking imposes second-hand smoke on bystanders and raises public healthcare costs and insurance premiums. The private decision has external costs — the bridge from individual choice to the externalities of Chapter 7.</p>
+          <ul class="clean-list">
+            <li><strong>Scarcity:</strong> unlimited wants in a world of limited resources. Scarcity forces a choice.</li>
+            <li><strong>Trade-off:</strong> getting more of one thing means giving up something else. Every choice under scarcity has one.</li>
+            <li><strong>Economic agents:</strong> individuals (students, parents, workers), businesses (Grab, FairPrice, Shopee) and government (ministries, regulators).</li>
+          </ul>
+          <div class="callout definition">
+            <span class="label">Definition</span>
+            <p><strong>Opportunity cost</strong> is the value of the <em>best alternative</em> that is given up when a choice is made. It is not necessarily measured in dollars, and it is not the sum of every alternative.</p>
+          </div>
+
+          <h3 id="s1-2">1.2 Opportunity cost and the cost–benefit rule</h3>
+          <p>The decision rule is simple: <strong>take an action only if its benefit exceeds its opportunity cost</strong> (or is at least equal). Net benefit = benefit − opportunity cost.</p>
+          <div class="callout example">
+            <span class="label">Worked example · the gig</span>
+            <p>A friend offers a 6-hour design gig for $180. The alternative is a cafe shift at $15/hour. Opportunity cost = 6 × $15 = $90. Net benefit = $180 − $90 = $90. Benefit exceeds cost, so the gig is optimal. The $180 is not the gain; the <em>net</em> $90 is.</p>
+          </div>
+          <div class="callout example">
+            <span class="label">Worked example · train vs drive</span>
+            <p>Train: $40 fare, 4 hours. Drive: $70 fuel, 6 hours. Time is worth $20/hour.</p>
+            <ul>
+              <li>Train total = 40 + 4(20) = $120.</li>
+              <li>Drive total = 70 + 6(20) = $190.</li>
+              <li>Train is cheaper by $70. If time were worth $60/hour, train = 280 and drive = 430; train still wins. The decision can flip if the time value changes enough.</li>
+            </ul>
+          </div>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>Do not add up all alternatives. If jobs pay $45k, $32k and $28k, the opportunity cost of taking the $45k job is $32k, not $60k. Only the <em>next-best</em> alternative matters.</p>
+          </div>
+          <p><strong>College is not just tuition.</strong> The true cost includes tuition plus the wages forgone while studying. A high true cost does not automatically make college a bad choice; compare it with the total benefit, including higher future earnings.</p>
+
+          <h3 id="s1-3">1.3 Positive vs normative economics</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Positive economics</th><th>Normative economics</th></tr></thead>
+              <tbody>
+                <tr><td>Describes what is or what will happen.</td><td>Recommends what ought to be.</td></tr>
+                <tr><td>Can be tested with evidence.</td><td>Depends on values and judgements.</td></tr>
+                <tr><td>"A sugar tax would reduce consumption."</td><td>"The government should tax sugary drinks."</td></tr>
+                <tr><td>"The tax would hit lower-income households harder as a share of income."</td><td>"Fairness matters more than efficiency."</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Economics can clarify consequences and trade-offs. It cannot decide society's values for it.</p>
+
+          <h3 id="s1-4">1.4 Micro vs macro</h3>
+          <div class="split">
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Microeconomics</span>
+              <p>Studies individuals, firms and governments in specific markets: why a firm sets a price, how a consumer chooses a bundle, whether a market is competitive.</p>
+            </div>
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Macroeconomics</span>
+              <p>Studies the whole economy: growth, inflation, unemployment, recessions, national income. It aggregates millions of individual decisions.</p>
+            </div>
+          </div>
+
+          <h3 id="s1-5">1.5 The three principles</h3>
+          <ol class="clean-list">
+            <li><strong>Optimization:</strong> making the best choice possible with the given information. People are not calculating machines, but economists assume they try to do the best they can.</li>
+            <li><strong>Equilibrium:</strong> a situation in which, given everyone else's choices, no one has an incentive to change their behaviour.</li>
+            <li><strong>Empiricism:</strong> using data to test economic ideas. Models generate predictions; data check them.</li>
+          </ol>
+          <div class="callout example">
+            <span class="label">Equilibrium in action</span>
+            <p>It rains; everyone wants a taxi. More passengers want rides, fares rise, some passengers change their plans, some drivers enter, and the market adjusts until no one wants to change behaviour at the going fare.</p>
+          </div>
+
+          <h3 id="s1-6">1.6 Models and the scientific method</h3>
+          <p>A <strong>model</strong> is a simplified description of reality. A flat map is useful even though it distorts the round Earth. The method:</p>
+          <p class="formula-line">model → prediction (hypothesis) → data → compare</p>
+          <div class="callout example">
+            <span class="label">Returns to education</span>
+            <p>Assumption: each additional year of education raises wages by 10%. Starting wage $15/hour.</p>
+            <p>After 4 years: 15 × (1.10)<sup>4</sup> = 15 × 1.4641 = $21.96/hour, a 46.5% increase. The data show about 56%. The model is <em>broadly consistent</em>, not exact. A model is tested, not assumed to be true.</p>
+          </div>
+          <ul class="clean-list">
+            <li><strong>Mean:</strong> the average; strongly affected by outliers.</li>
+            <li><strong>Median:</strong> the middle value; robust to outliers.</li>
+            <li><strong>Argument by anecdote:</strong> using one story to dismiss a pattern based on thousands of observations.</li>
+          </ul>
+
+          <h3 id="s1-7">1.7 Causation vs correlation</h3>
+          <p><strong>Correlation</strong> means two variables move together. <strong>Causation</strong> means one directly changes the other. Three ways correlation can mislead:</p>
+          <ul class="clean-list">
+            <li><strong>Omitted variable:</strong> cows with names produce more milk. A caring farmer both names the cows and provides better care. Care quality drives both; the name does not cause the milk.</li>
+            <li><strong>Reverse causality:</strong> elderly gamblers are healthier. It may be that healthier people are more able to gamble, not that gambling improves health.</li>
+            <li><strong>Coincidence:</strong> two variables can move together by chance.</li>
+          </ul>
+          <div class="callout definition">
+            <span class="label">Natural experiment</span>
+            <p>An external change creates treatment and control groups, ideally as-good-as-random. In 1947 the UK raised the school leaving age from 14 to 15: students who turned 14 before the reform could leave; those who turned 14 later had to stay. The comparison found about a 10% earnings increase from one extra year of schooling.</p>
+          </div>
+          <p>Controlled experiments are often difficult or unethical in economics. Random assignment makes treatment and control comparable; natural experiments exploit policy changes or other external events.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 1 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Define opportunity cost as the best alternative, not the sum.</li>
+              <li>Apply the cost–benefit rule in a decision scenario.</li>
+              <li>Classify positive vs normative statements.</li>
+              <li>Distinguish omitted variable from reverse causality.</li>
+              <li>Explain what makes a natural experiment informative.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-foundations">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 2 ================= -->
+        <section class="chapter" id="ch-demand-supply">
+          <span class="week-chip">Week 2 · Demand, Supply, and Equilibrium</span>
+          <h2><span class="ch-no">Chapter 02</span>Demand, Supply &amp; Equilibrium</h2>
+          <p class="chapter-lede">A market settles where buyers' plans and sellers' plans match. The exam tests whether you can separate a movement along a curve from a shift of the curve, and whether you can handle both curves shifting at once.</p>
+
+          <h3 id="s2-1">2.1 Markets and perfect competition</h3>
+          <p>A <strong>market</strong> is a group of economic agents trading a good or service, plus the rules and arrangements for trading. It does not need a physical location.</p>
+          <div class="callout definition">
+            <span class="label">Perfectly competitive market</span>
+            <ul style="margin-bottom:0;">
+              <li>All sellers sell an identical good or service.</li>
+              <li>No individual buyer or seller is big enough to influence the market price.</li>
+              <li>Every buyer pays, and every seller charges, the same market price.</li>
+            </ul>
+          </div>
+          <p>Buyers and sellers are <strong>price-takers</strong>: they accept the market price. Gold is a classic example; cars, cereals and electricity transmission are not close because of differentiation or concentration.</p>
+
+          <h3 id="s2-2">2.2 Demand</h3>
+          <p><strong>Quantity demanded</strong> is the amount buyers are willing to purchase at a given price. A <strong>demand schedule</strong> is a table of quantity demanded at different prices; the <strong>demand curve</strong> plots those price–quantity pairs, holding all else equal.</p>
+          <ul class="clean-list">
+            <li><strong>Willingness to pay (WTP):</strong> the highest price a buyer will pay for an extra unit. The height of the demand curve at a quantity is the WTP for that marginal unit.</li>
+            <li><strong>Diminishing marginal benefit:</strong> as consumption rises, the extra benefit from each additional unit falls. This is why demand slopes downward.</li>
+            <li><strong>Law of demand:</strong> quantity demanded rises when price falls, all else equal.</li>
+            <li><strong>Market demand:</strong> the horizontal sum of individual demand curves — add quantities at each price.</li>
+          </ul>
+          <div class="callout definition">
+            <span class="label">The five demand shifters</span>
+            <ol style="margin-bottom:0;">
+              <li>Tastes and preferences.</li>
+              <li>Income and wealth: normal good (income ↑ → demand right) vs inferior good (income ↑ → demand left).</li>
+              <li>Prices and availability of related goods: substitutes (price of one ↑ → demand for other right) vs complements (price of one ↑ → demand for other left).</li>
+              <li>Number and scale of buyers.</li>
+              <li>Buyers' expectations about the future.</li>
+            </ol>
+          </div>
+          <div class="callout trap">
+            <span class="label">The only reason for a movement along demand</span>
+            <p>A change in the good's <strong>own price</strong>. Any other demand determinant shifts the curve. This distinction is worth several MCQs on its own.</p>
+          </div>
+
+          <h3 id="s2-3">2.3 Supply</h3>
+          <p><strong>Quantity supplied</strong> is the amount sellers are willing to sell at a given price. A <strong>supply schedule</strong> is a table of quantities at different prices; the <strong>supply curve</strong> plots it. <strong>Willingness to accept (WTA)</strong> is the lowest price a seller will accept for an extra unit; it is the height of the supply curve.</p>
+          <div class="callout definition">
+            <span class="label">The four supply shifters</span>
+            <ol style="margin-bottom:0;">
+              <li>Input prices.</li>
+              <li>Technology.</li>
+              <li>Number and scale of sellers.</li>
+              <li>Sellers' expectations about the future.</li>
+            </ol>
+          </div>
+          <p>The only reason for a movement along supply is a change in the good's own price. Higher input costs shift supply left; cost-saving technology shifts supply right.</p>
+
+          <h3 id="s2-4">2.4 Competitive equilibrium</h3>
+          <p>The <strong>competitive equilibrium</strong> is the price at which quantity supplied equals quantity demanded, and the corresponding quantity. At a price below equilibrium there is <strong>excess demand (a shortage)</strong>; above equilibrium there is <strong>excess supply (a surplus)</strong>.</p>
+          <div class="callout example">
+            <span class="label">Linear equilibrium</span>
+            <p>If Q<sub>d</sub> = 200 − 4P and Q<sub>s</sub> = 20 + 2P, set 200 − 4P = 20 + 2P → 180 = 6P → P* = $30, Q* = 80. At P = $20, Q<sub>d</sub> = 120 and Q<sub>s</sub> = 60: a shortage of 60 units.</p>
+          </div>
+
+          <h3 id="s2-5">2.5 Shift analysis: one curve and both curves</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Shift</th><th>Equilibrium price</th><th>Equilibrium quantity</th></tr></thead>
+              <tbody>
+                <tr><td>Demand right</td><td>↑</td><td>↑</td></tr>
+                <tr><td>Demand left</td><td>↓</td><td>↓</td></tr>
+                <tr><td>Supply right</td><td>↓</td><td>↑</td></tr>
+                <tr><td>Supply left</td><td>↑</td><td>↓</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Both curves</th><th>Price</th><th>Quantity</th></tr></thead>
+              <tbody>
+                <tr><td>Demand ↑, supply ↑</td><td>Ambiguous</td><td>↑</td></tr>
+                <tr><td>Demand ↓, supply ↓</td><td>Ambiguous</td><td>↓</td></tr>
+                <tr><td>Demand ↑, supply ↓</td><td>↑</td><td>Ambiguous</td></tr>
+                <tr><td>Demand ↓, supply ↑</td><td>↓</td><td>Ambiguous</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout example">
+            <span class="label">Applications to remember</span>
+            <ul style="margin-bottom:0;">
+              <li><strong>Hot summer + chip shortage:</strong> demand for air conditioners shifts right, supply shifts left. Price definitely rises; quantity is ambiguous.</li>
+              <li><strong>Roses before Valentine's:</strong> demand rises and supply is inelastic in the short run, so price spikes. <strong>Canned drinks before Chinese New Year:</strong> demand rises but supply is elastic and can also expand, so the price effect is small.</li>
+              <li><strong>Organic vegetables:</strong> higher price and lower quantity fit a leftward supply shift (higher growing costs) better than a pure demand story.</li>
+              <li><strong>Bubble tea puzzle:</strong> price falls from $4 to $3 and quantity sold also falls. Possible if demand shifts left: the new equilibrium has a lower price and lower quantity; the law of demand is not violated.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-demand-supply">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 3 ================= -->
+        <section class="chapter" id="ch-elasticity">
+          <span class="week-chip">Week 2–3 · Elasticity (moved out of Week 3)</span>
+          <h2><span class="ch-no">Chapter 03</span>Elasticity</h2>
+          <p class="chapter-lede">Elasticity is the missing piece of demand and supply: it tells you <em>how much</em> quantity responds. Week 3 repeated it after demand; here it appears once, immediately after the demand chapter, and is then used in tax incidence and pricing.</p>
+
+          <h3 id="s3-1">3.1 Price elasticity of demand</h3>
+          <div class="callout formula">
+            <span class="label">Formula</span>
+            <p class="formula-line">E<sub>d</sub> = %ΔQ<sub>d</sub> ÷ %ΔP</p>
+            <p>Percentage changes are calculated from the <strong>initial values</strong> in this course. The negative sign reflects the law of demand; when classifying demand, use the absolute value.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>|E<sub>d</sub>|</th><th>Name</th><th>Meaning</th></tr></thead>
+              <tbody>
+                <tr><td>&gt; 1</td><td>Elastic</td><td>Quantity responds proportionally more than price.</td></tr>
+                <tr><td>= 1</td><td>Unit elastic</td><td>Same percentage response.</td></tr>
+                <tr><td>&lt; 1</td><td>Inelastic</td><td>Quantity responds proportionally less than price.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout example">
+            <span class="label">Worked example</span>
+            <p>Price rises from $25 to $50; quantity falls from 4 to 3.</p>
+            <p>%ΔQ = (3 − 4)/4 = −25%. %ΔP = (50 − 25)/25 = +100%. E<sub>d</sub> = −25%/100% = <strong>−0.25</strong>. Demand is inelastic. A 1% price rise reduces quantity by about 0.25%.</p>
+          </div>
+
+          <h3 id="s3-2">3.2 Elasticity and total spending</h3>
+          <p>Total spending (and the firm's total revenue) is P × Q. A price change has a <strong>price effect</strong> and a <strong>quantity effect</strong>.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Demand</th><th>Price ↑</th><th>Total spending</th></tr></thead>
+              <tbody>
+                <tr><td>Elastic</td><td>Quantity falls proportionally more</td><td>Falls</td></tr>
+                <tr><td>Unit elastic</td><td>Proportional change</td><td>Unchanged</td></tr>
+                <tr><td>Inelastic</td><td>Quantity falls proportionally less</td><td>Rises</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>Elasticity is about percentage changes, not dollar or unit changes. A price cut raises revenue only if demand is elastic over the relevant range. If demand is inelastic, a price cut <em>reduces</em> revenue.</p>
+          </div>
+
+          <h3 id="s3-3">3.3 What makes demand more elastic?</h3>
+          <ol class="clean-list">
+            <li><strong>Availability of close substitutes:</strong> more substitutes → more elastic.</li>
+            <li><strong>Share of the budget:</strong> a larger share of income → more elastic.</li>
+            <li><strong>Time to adjust:</strong> more time → more elastic, because consumers can change habits and find substitutes.</li>
+          </ol>
+          <p>At the same price and quantity, a flatter demand curve is more elastic. A vertical demand curve is perfectly inelastic; a horizontal one is perfectly elastic.</p>
+
+          <h3 id="s3-4">3.4 Cross-price and income elasticity</h3>
+          <div class="callout formula">
+            <span class="label">Cross-price elasticity</span>
+            <p class="formula-line">E<sub>ab</sub> = %ΔQ<sub>a</sub> ÷ %ΔP<sub>b</sub></p>
+            <ul style="margin-bottom:0;">
+              <li>E<sub>ab</sub> &gt; 0 → substitutes (higher price of B raises demand for A).</li>
+              <li>E<sub>ab</sub> &lt; 0 → complements (higher price of B lowers demand for A).</li>
+              <li>E<sub>ab</sub> = 0 → unrelated.</li>
+            </ul>
+          </div>
+          <div class="callout formula">
+            <span class="label">Income elasticity</span>
+            <p class="formula-line">E<sub>I</sub> = %ΔQ ÷ %ΔIncome</p>
+            <ul style="margin-bottom:0;">
+              <li>E<sub>I</sub> &lt; 0 → inferior good.</li>
+              <li>0 &lt; E<sub>I</sub> &lt; 1 → normal necessity.</li>
+              <li>E<sub>I</sub> &gt; 1 → normal luxury.</li>
+            </ul>
+          </div>
+          <p>The <strong>sign</strong> identifies the direction of the relationship; the <strong>magnitude</strong> identifies its strength. A positive cross-price elasticity of 0.1 means weak substitutes; a value of 2 means strong substitutes.</p>
+          <div class="callout example">
+            <span class="label">Which elasticity?</span>
+            <p>Grab price rises and taxi demand changes → cross-price elasticity. Income rises and public transport demand changes → income elasticity. Coffee price rises and coffee quantity changes → price elasticity of demand. Quantity supplied responds to the good's own price → price elasticity of supply.</p>
+          </div>
+
+          <h3 id="s3-5">3.5 Price elasticity of supply and point elasticity</h3>
+          <p><strong>Price elasticity of supply</strong> = %ΔQ<sub>s</sub> / %ΔP. If E<sub>s</sub> = 2 and price rises 200%, quantity supplied rises 400%.</p>
+          <p>For a linear demand curve Q = a − bP, the point elasticity is:</p>
+          <p class="formula-line">E<sub>d</sub> = (ΔQ/ΔP)(P/Q) = −b(P/Q)</p>
+          <p>Elasticity changes along a straight line because P/Q changes, even though the slope is constant. This is a useful harder MCQ.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 3 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Calculate E<sub>d</sub> using initial values and classify it.</li>
+              <li>Predict the direction of total spending from elasticity.</li>
+              <li>Classify substitutes/complements and inferior/necessity/luxury from the sign and size.</li>
+              <li>Choose the correct elasticity from the scenario.</li>
+              <li>Use the course's elasticity rule for tax incidence in Chapter 7.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-elasticity">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 4 ================= -->
+        <section class="chapter" id="ch-consumer-choice">
+          <span class="week-chip">Week 3 · Consumer and Seller Decision (consumer half)</span>
+          <h2><span class="ch-no">Chapter 04</span>Consumer Choice &amp; Surplus</h2>
+          <p class="chapter-lede">The buyer's problem is to choose the best affordable bundle. The solution uses marginal benefit per dollar, not total benefit. Consumer surplus converts that choice into a welfare measure.</p>
+
+          <h3 id="s4-1">4.1 The buyer's problem</h3>
+          <p>Three things determine the buyer's choice: <strong>preferences</strong> (what you like), <strong>prices</strong> (what things cost) and <strong>budget/income</strong> (what you can afford).</p>
+
+          <h3 id="s4-2">4.2 The budget constraint</h3>
+          <div class="callout formula">
+            <span class="label">Budget constraint</span>
+            <p class="formula-line">P<sub>x</sub>X + P<sub>y</sub>Y = I</p>
+            <p>Intercepts: if all income is spent on X, X = I/P<sub>x</sub>; if all on Y, Y = I/P<sub>y</sub>. The slope is −P<sub>x</sub>/P<sub>y</sub>.</p>
+          </div>
+          <p>The <strong>opportunity cost</strong> of one unit of X is P<sub>x</sub>/P<sub>y</sub> units of Y. It is the price ratio, not the money price.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Change</th><th>Budget line</th><th>Opportunity cost</th></tr></thead>
+              <tbody>
+                <tr><td>Income rises</td><td>Parallel outward shift</td><td>Unchanged</td></tr>
+                <tr><td>Both prices double</td><td>Parallel inward shift</td><td>Unchanged (ratio same)</td></tr>
+                <tr><td>Only P<sub>x</sub> rises</td><td>Pivot inward on X-axis</td><td>Rises (X becomes more expensive in Y)</td></tr>
+                <tr><td>Only P<sub>x</sub> falls</td><td>Pivot outward on X-axis</td><td>Falls</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>If both prices move by the same proportion, the opportunity cost does not change. Only <em>relative</em> price changes alter the slope.</p>
+          </div>
+
+          <h3 id="s4-3">4.3 Marginal benefit and the optimal bundle</h3>
+          <p><strong>Marginal benefit (MB)</strong> is the extra benefit from one more unit. <strong>Diminishing marginal benefit</strong> means MB falls as consumption rises. Because goods have different prices, compare <strong>MB per dollar</strong>:</p>
+          <p class="formula-line">MB per dollar = MB ÷ P</p>
+          <p>Buy the next unit of whichever good gives the higher MB per dollar. Keep reallocating until:</p>
+          <p class="formula-line">MB<sub>x</sub>/P<sub>x</sub> = MB<sub>y</sub>/P<sub>y</sub>, and the budget is exhausted</p>
+          <div class="callout example">
+            <span class="label">Worked example · MB per dollar</span>
+            <p>Rice: MB = $14, P = $2 → MB/P = 7. Beans: MB = $18, P = $3 → MB/P = 6. Buy more rice and less beans. The consumer shifts spending toward rice until the ratios equalise.</p>
+          </div>
+          <p>A price change alters MB/P for that good, so the consumer reallocates. This is how the individual demand curve is derived: at a lower price, the MB/P ratio rises, so quantity demanded rises.</p>
+
+          <h3 id="s4-4">4.4 Consumer surplus</h3>
+          <div class="callout definition">
+            <span class="label">Definition</span>
+            <p><strong>Consumer surplus</strong> is the benefit a buyer receives beyond what they pay: CS = WTP − P. A buyer purchases only if WTP ≥ P.</p>
+          </div>
+          <p>Total consumer surplus is the sum of individual surpluses for all buyers who purchase. For a market, it is the area below the demand curve and above the price, up to the quantity traded. For linear demand P = a − bQ and price P:</p>
+          <p class="formula-line">CS = ½ × (a − P) × Q</p>
+          <p>When price falls, consumer surplus rises for two reasons: existing buyers pay less, and new buyers enter because their WTP is now above the lower price. The first is a transfer from producers; the second is new surplus.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 4 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Write and interpret the budget constraint; find intercepts and opportunity cost.</li>
+              <li>Apply the MB per dollar rule; identify the optimal bundle or the next purchase.</li>
+              <li>Calculate individual and market consumer surplus.</li>
+              <li>Explain why a price change creates a movement along demand, not a shift.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-consumer-choice">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 5 ================= -->
+        <section class="chapter" id="ch-costs-competition">
+          <span class="week-chip">Weeks 3–4 · Sellers, Costs and Perfect Competition</span>
+          <h2><span class="ch-no">Chapter 05</span>Costs, Profit &amp; Perfect Competition</h2>
+          <p class="chapter-lede">The seller's problem is to maximise profit. In the short run, some inputs are fixed; in the long run, all inputs can change. The supply curve is the firm's marginal cost curve above minimum average variable cost.</p>
+
+          <h3 id="s5-1">5.1 Production and time horizons</h3>
+          <ul class="clean-list">
+            <li><strong>Short run:</strong> at least one input is fixed (e.g., the kitchen, the number of ovens).</li>
+            <li><strong>Long run:</strong> all inputs can be changed (e.g., build another kitchen).</li>
+            <li><strong>Variable factor:</strong> can be changed in the short run and changes with output (labour, ingredients).</li>
+            <li><strong>Fixed factor:</strong> cannot be changed in the short run (rent, equipment lease).</li>
+            <li><strong>Marginal product:</strong> MP = ΔQ / Δinput.</li>
+          </ul>
+          <p>Marginal product first rises because of <strong>specialisation</strong>, then falls because of the <strong>law of diminishing returns</strong>, and can become negative if too many workers crowd a fixed capital stock.</p>
+          <div class="callout example">
+            <span class="label">Marginal product table</span>
+            <p>Workers 0–7 with output 0, 12, 26, 40, 50, 58, 60, 59. MP = 12, 14, 14, 10, 8, 2, −1. Diminishing returns begin with the 4th worker because MP first falls from 14 to 10. Total output still rises until the 7th worker, where MP becomes negative.</p>
+          </div>
+
+          <h3 id="s5-2">5.2 Costs and cost curves</h3>
+          <div class="callout formula">
+            <span class="label">Cost formulas</span>
+            <p class="formula-line">TC = FC + VC</p>
+            <p class="formula-line">ATC = TC/Q &nbsp; AVC = VC/Q &nbsp; AFC = FC/Q</p>
+            <p class="formula-line">MC = ΔTC/ΔQ &nbsp; ATC = AVC + AFC</p>
+          </div>
+          <ul class="clean-list">
+            <li><strong>AFC</strong> always falls as Q rises: the same fixed cost is spread over more units.</li>
+            <li><strong>AVC</strong> is U-shaped: it falls while marginal product rises (specialisation), then rises when diminishing returns set in.</li>
+            <li><strong>MC</strong> crosses AVC and ATC at their minimum points. If MC is below an average, it pulls the average down; if above, it pushes it up.</li>
+            <li><strong>ATC</strong> can keep falling after AVC starts rising because falling AFC offsets rising AVC. ATC turns upward later than AVC.</li>
+          </ul>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>MC = ATC at the <em>minimum</em> ATC, not at the minimum MC. The MC curve itself can be rising while ATC is still falling.</p>
+          </div>
+
+          <h3 id="s5-3">5.3 Profit: accounting vs economic</h3>
+          <div class="callout formula">
+            <span class="label">Profit</span>
+            <p class="formula-line">π = TR − TC = (P − ATC) × Q</p>
+            <p>TR = P × Q. Use TR − TC when the question gives exact total cost at the optimal quantity; use (P − ATC)Q when it gives price and ATC.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Accounting profit</th><th>Economic profit</th></tr></thead>
+              <tbody>
+                <tr><td>Revenue − explicit costs</td><td>Revenue − explicit costs − implicit costs</td></tr>
+                <tr><td>Counts rent, wages, materials paid</td><td>Also subtracts forgone salary, forgone interest, forgone rent</td></tr>
+                <tr><td>What an accountant reports</td><td>The relevant measure for the decision</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout example">
+            <span class="label">Worked example</span>
+            <p>Maya leaves a $72,000 job, earns $180,000 revenue, has $95,000 explicit costs, and gives up $3,000 interest.</p>
+            <ul style="margin-bottom:0;">
+              <li>Accounting profit = 180,000 − 95,000 = $85,000.</li>
+              <li>Implicit costs = 72,000 + 3,000 = $75,000.</li>
+              <li>Economic profit = 180,000 − 95,000 − 75,000 = $10,000.</li>
+            </ul>
+          </div>
+
+          <h3 id="s5-4">5.4 Profit maximisation and the supply curve</h3>
+          <p>A competitive firm is a price-taker, so MR = P. Profit is maximised where:</p>
+          <p class="formula-line">P = MR = MC</p>
+          <p>If MR &gt; MC, produce more; if MR &lt; MC, produce less. The firm's short-run supply curve is the MC curve above minimum AVC, because below that price it shuts down.</p>
+          <div class="callout example">
+            <span class="label">Three-step profit check</span>
+            <ol style="margin-bottom:0;">
+              <li>Find Q where P = MC.</li>
+              <li>Check P against AVC: if P &lt; AVC, shut down.</li>
+              <li>If producing, compare P with ATC: P &gt; ATC profit; P = ATC break-even; P &lt; ATC loss.</li>
+            </ol>
+          </div>
+
+          <h3 id="s5-5">5.5 The shutdown rule</h3>
+          <div class="callout definition">
+            <span class="label">Shutdown rule</span>
+            <p>Produce if P ≥ AVC. Shut down if P &lt; AVC. At P = AVC, the firm is indifferent in the short run.</p>
+          </div>
+          <p>Fixed costs must be paid whether the firm produces or shuts down, so they do not affect the shutdown decision. If P &lt; ATC but P &gt; AVC, the firm produces at a loss because each unit contributes something toward fixed costs; shutting down would lose the entire fixed cost.</p>
+          <p><strong>Loss ≠ shutdown.</strong> Shutting down is a short-run decision to produce zero while still paying fixed costs. <strong>Exiting</strong> is a long-run decision to leave the industry and avoid all costs.</p>
+          <div class="callout example">
+            <span class="label">Hawker stall</span>
+            <p>P = $8, AVC = $5, ATC = $12. The stall makes a loss on every plate, but P &gt; AVC, so it stays open in the short run. A fixed-cost increase (rent) raises ATC and lowers profit but does not change the shutdown decision.</p>
+          </div>
+
+          <h3 id="s5-6">5.6 Producer surplus and long-run equilibrium</h3>
+          <p><strong>Producer surplus</strong> is the area below price and above the supply (MC) curve. For linear supply P = c + dQ and price P:</p>
+          <p class="formula-line">PS = ½ × (P − c) × Q</p>
+          <p>In the long run, free entry and exit drive economic profit to zero:</p>
+          <p class="formula-line">P = MC = ATC</p>
+          <ul class="clean-list">
+            <li>Positive profit → entry → supply right → price falls → profit falls to zero.</li>
+            <li>Loss → exit → supply left → price rises → loss shrinks to zero.</li>
+            <li>In a constant-cost industry, entry does not raise input prices, so long-run price returns to the original minimum ATC. The long-run supply curve is horizontal.</li>
+          </ul>
+          <p>Zero economic profit does not mean zero accounting profit. Economic costs include opportunity costs, so firms earn exactly what they could earn in their next-best alternative.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 5 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Complete a cost table and compute ATC, AVC, AFC and MC.</li>
+              <li>Compute profit both ways; distinguish accounting and economic profit.</li>
+              <li>Apply the shutdown rule and explain why fixed costs are irrelevant to it.</li>
+              <li>Explain entry/exit and zero long-run profit.</li>
+              <li>Calculate consumer and producer surplus in a competitive market.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-costs-competition">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 6 ================= -->
+        <section class="chapter" id="ch-monopoly">
+          <span class="week-chip">Week 4 + Week 12 final review · Perfect Competition, Efficiency and Monopoly</span>
+          <h2><span class="ch-no">Chapter 06</span>Efficiency, Perfect Competition &amp; Monopoly</h2>
+          <p class="chapter-lede">The invisible hand turns self-interest into social surplus — under perfect competition. Market power breaks that harmony. This chapter merges Week 4's monopoly with every worked problem from the Week 12 final review.</p>
+
+          <h3 id="s6-1">6.1 The invisible hand and Pareto efficiency</h3>
+          <p>Adam Smith: "It is not from the benevolence of the butcher, the brewer, or the baker, that we expect our dinner, but from their regard to their own interest." Under the assumptions of perfect competition, equilibrium is <strong>Pareto efficient</strong>: no one can be made better off without making someone else worse off. Social surplus is maximised.</p>
+          <p>Efficiency does not imply fairness. Competitive markets can produce efficient but inequitable outcomes. Government intervention cannot be justified on efficiency grounds in a perfectly competitive market, but it can be justified on <strong>equity</strong> grounds.</p>
+
+          <h3 id="s6-2">6.2 Prices as the rationing device</h3>
+          <p>Singapore's COE is an example. The government fixes the number of certificates, but not the price. Bidders compete; the price rises until quantity demanded equals the quota. The price allocates the scarce certificates to those who value them most.</p>
+          <p>If the government caps the price below the new equilibrium after a demand spike, quantity demanded exceeds quantity supplied: a shortage. The price no longer rations the good, and deadweight loss results.</p>
+
+          <h3 id="s6-3">6.3 Market structure comparison</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Characteristic</th><th>Perfect competition</th><th>Monopoly</th></tr></thead>
+              <tbody>
+                <tr><td>Sellers</td><td>Many</td><td>One</td></tr>
+                <tr><td>Product</td><td>Identical</td><td>No close substitutes</td></tr>
+                <tr><td>Barriers to entry</td><td>None</td><td>High</td></tr>
+                <tr><td>Price-taker or maker?</td><td>Price-taker</td><td>Price-maker</td></tr>
+                <tr><td>Pricing rule</td><td>P = MR = MC</td><td>P &gt; MR = MC</td></tr>
+                <tr><td>Firm demand</td><td>Horizontal</td><td>Downward-sloping</td></tr>
+                <tr><td>Long-run profit</td><td>Zero</td><td>Potentially positive</td></tr>
+                <tr><td>Social surplus</td><td>Maximised</td><td>Not maximised</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 id="s6-4">6.4 Sources of market power</h3>
+          <ul class="clean-list">
+            <li><strong>Legal barriers:</strong> patents (sole right to produce an invention), copyrights (creative works). Example: a patented drug; Xerox's plain-paper copying patents.</li>
+            <li><strong>Natural barriers:</strong> control of a key resource (Alcoa bauxite, De Beers diamonds) or economies of scale so large that one firm can serve the market at lower average cost than several.</li>
+            <li><strong>Natural monopoly:</strong> ATC keeps falling over the relevant range of output. Example: SP Group's electricity and gas transmission grid. Duplicating the network would waste enormous fixed costs.</li>
+          </ul>
+          <div class="callout example">
+            <span class="label">Xerox: patents in action</span>
+            <p>Xerox held patents covering plain-paper copying technology and at one point had close to 95% of the US copier market. After the patents expired — and an antitrust settlement forced licensing — competitors entered and prices fell. The temporary monopoly was the reward for the invention; competition returned when the legal barrier ended.</p>
+          </div>
+          <div class="callout exam">
+            <span class="label">Why patents exist</span>
+            <p>A patent is a deliberate trade-off. It creates temporary market power and some deadweight loss, but preserves the incentive to invest in research. Without the prospect of a return, innovation would be underprovided. Regulate a natural monopoly; protect a patent for a limited time.</p>
+          </div>
+
+          <h3 id="s6-5">6.5 Monopoly revenue and marginal revenue</h3>
+          <p>A monopolist faces the downward-sloping market demand curve. To sell more, it must lower the price on <em>all</em> units it sells. Therefore MR &lt; P.</p>
+          <ul class="clean-list">
+            <li><strong>Quantity effect:</strong> revenue gained on the new units sold.</li>
+            <li><strong>Price effect:</strong> revenue lost on existing units because the price is lower.</li>
+            <li>For linear demand P = a − bQ, MR = a − 2bQ. The MR curve has twice the slope and lies below demand.</li>
+          </ul>
+          <div class="callout example">
+            <span class="label">Price cut decomposition</span>
+            <p>Price falls from $6 to $4; quantity rises from 300 to 500. Gain on new units = 4 × 200 = $800. Loss on existing 300 units = (6 − 4) × 300 = $600. Net revenue change = +$200. TR goes from $1,800 to $2,000.</p>
+          </div>
+
+          <h3 id="s6-6">6.6 Profit maximisation: table and graph</h3>
+          <div class="callout formula">
+            <span class="label">Monopoly recipe</span>
+            <ol style="margin-bottom:0;">
+              <li>Find Q<sub>M</sub> where MR = MC.</li>
+              <li>Go up to the demand curve to find P<sub>M</sub>.</li>
+              <li>Go down to the ATC curve to find cost per unit.</li>
+              <li>Profit = (P<sub>M</sub> − ATC) × Q<sub>M</sub>, or TR − TC.</li>
+            </ol>
+          </div>
+          <div class="callout example">
+            <span class="label">Claritin-style table</span>
+            <p>If MR = MC at Q = 30, P = $70 and ATC = $25, profit = (70 − 25) × 30 = $1,350; TR − TC = $2,100 − $750 = $1,350. The two formulas agree.</p>
+          </div>
+          <div class="callout trap">
+            <span class="label">Units and precision traps</span>
+            <ul style="margin-bottom:0;">
+              <li>If the horizontal axis is in thousands, 30 on the axis means 30,000 gallons. Multiply before computing profit or DWL.</li>
+              <li>If the question gives exact total cost at the optimal quantity, TR − TC is more precise than reading ATC from a graph.</li>
+              <li>If it asks for profit <em>per unit</em>, answer P − ATC, not total profit.</li>
+            </ul>
+          </div>
+
+          <h3 id="s6-7">6.7 Welfare: consumer surplus, producer surplus, DWL</h3>
+          <p>At the monopoly outcome Q<sub>M</sub>, P<sub>M</sub>:</p>
+          <p class="formula-line">CS = ½ × (P<sub>demand intercept</sub> − P<sub>M</sub>) × Q<sub>M</sub></p>
+          <p class="formula-line">PS = (P<sub>M</sub> − MC) × Q<sub>M</sub> &nbsp; (constant MC)</p>
+          <p class="formula-line">DWL = ½ × (P<sub>M</sub> − MC) × (Q<sub>C</sub> − Q<sub>M</sub>)</p>
+          <p>Q<sub>C</sub> is the competitive quantity where P = MC. The DWL triangle covers units that would be worth more to buyers than they cost to produce, but the monopolist does not produce them because doing so would require lowering the price on existing units.</p>
+          <div class="callout example">
+            <span class="label">Week 12 worked problem</span>
+            <p>Demand intercept $9, MC = $3, MR = MC at Q = 300, P<sub>M</sub> = $6. Competitive Q = 600.</p>
+            <ul style="margin-bottom:0;">
+              <li>CS = ½(9 − 6)(300) = $450.</li>
+              <li>PS = (6 − 3)(300) = $900.</li>
+              <li>DWL = ½(6 − 3)(600 − 300) = $450.</li>
+            </ul>
+          </div>
+          <div class="callout trap">
+            <span class="label">Producer surplus vs profit</span>
+            <p>Producer surplus is (P<sub>M</sub> − MC) × Q<sub>M</sub> and ignores fixed cost. Profit is (P<sub>M</sub> − ATC) × Q<sub>M</sub> and subtracts fixed cost. A monopolist can have positive producer surplus and negative profit if fixed costs are large.</p>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 640 380" role="img" aria-label="Monopoly diagram showing demand, marginal revenue, marginal cost, monopoly quantity, competitive quantity and deadweight loss">
+              <rect x="0" y="0" width="640" height="380" fill="#fffdf8"/>
+              <line class="axis" x1="60" y1="330" x2="615" y2="330"/>
+              <line class="axis" x1="60" y1="330" x2="60" y2="40"/>
+              <text x="625" y="325" text-anchor="end">Q</text>
+              <text x="48" y="50" text-anchor="end">P</text>
+              <line class="curve" x1="100" y1="70" x2="570" y2="310"/>
+              <line class="curve" x1="100" y1="70" x2="380" y2="310"/>
+              <line class="curve" x1="70" y1="230" x2="590" y2="230"/>
+              <polygon class="shade" points="286.7,165.4 413.1,230 286.7,230"/>
+              <line class="dash" x1="286.7" y1="165.4" x2="286.7" y2="330"/>
+              <line class="dash" x1="60" y1="165.4" x2="286.7" y2="165.4"/>
+              <line class="dash" x1="413.1" y1="230" x2="413.1" y2="330"/>
+              <circle cx="286.7" cy="165.4" r="3.5" fill="#111"/>
+              <circle cx="286.7" cy="230" r="3.5" fill="#111"/>
+              <circle cx="413.1" cy="230" r="3.5" fill="#111"/>
+              <text class="lbl" x="548" y="305" text-anchor="end">Demand</text>
+              <text class="lbl" x="360" y="298" text-anchor="start">MR</text>
+              <text class="lbl" x="594" y="224" text-anchor="end">MC</text>
+              <text x="54" y="169" text-anchor="end">Pm</text>
+              <text x="286.7" y="349" text-anchor="middle">Qm</text>
+              <text x="413.1" y="349" text-anchor="middle">Qc</text>
+              <text x="316" y="211" text-anchor="start">DWL</text>
+            </svg>
+            <figcaption><strong>Monopoly.</strong> MR = MC gives Qm. Go up to demand for Pm. The competitive quantity Qc is where P = MC. The shaded triangle between demand and MC, from Qm to Qc, is deadweight loss. Profit would be the rectangle (Pm − ATC) × Qm.</figcaption>
+          </figure>
+
+          <h3 id="s6-8">6.8 Regulation, antitrust and innovation</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Policy</th><th>Rule</th><th>Profit consequence</th></tr></thead>
+              <tbody>
+                <tr><td>Efficient / socially optimal price</td><td>P = MC</td><td>May be a loss if ATC &gt; MC (natural monopoly).</td></tr>
+                <tr><td>Fair-returns price</td><td>P = ATC</td><td>Zero economic profit; firm remains viable.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Antitrust policy</strong> tries to prevent anti-competitive pricing, restricted quantities and DWL. Singapore's Competition Act (2004) prohibits anti-competitive agreements, abuse of dominance and mergers that substantially lessen competition, enforced by the CCCS. The Grab–Uber merger is the case study: Grab's share rose to about 80%, fares rose 10–15%, and the firms were fined S$13 million; Grab had to remove exclusivity deals and revert pricing.</p>
+          <p><strong>Regulating a natural monopoly</strong> is often better than breaking it up, because breaking it up sacrifices economies of scale. EMA reviews SP Group's tariffs, setting them close to a fair-returns price.</p>
+          <div class="callout exam">
+            <span class="label">Can monopoly be good?</span>
+            <p>Market power can drive innovation. The patent system deliberately trades static efficiency for dynamic efficiency. The right policy depends on the source of market power: regulate a natural monopoly, protect a patent for a limited time, and use antitrust against anti-competitive conduct.</p>
+          </div>
+
+          <div class="callout exam">
+            <span class="label">Chapter 6 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Explain the invisible hand condition and why monopoly reduces total surplus.</li>
+              <li>Identify barriers to entry and natural monopoly.</li>
+              <li>Compute Q, P, profit, CS, PS and DWL from a monopoly table or graph.</li>
+              <li>Distinguish efficient pricing from fair-returns pricing.</li>
+              <li>Handle units and per-unit vs total traps.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-monopoly">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 7 ================= -->
+        <section class="chapter" id="ch-government-failure">
+          <span class="week-chip">Week 5 · Externalities, Public Goods, Taxation and Regulation</span>
+          <h2><span class="ch-no">Chapter 07</span>Externalities, Public Goods &amp; Government</h2>
+          <p class="chapter-lede">When private costs or benefits diverge from social costs or benefits, free markets fail. Government can correct the failure — but intervention has costs too. This chapter combines externalities, public goods, tax incidence, price controls and government failure.</p>
+
+          <h3 id="s7-1">7.1 Market failure</h3>
+          <p>A free market fails to maximise social surplus when prices do not reflect all costs or benefits. Two major cases: <strong>externalities</strong> and <strong>public goods</strong>. In both, private costs/benefits diverge from social costs/benefits.</p>
+
+          <h3 id="s7-2">7.2 Externalities: definitions and graphs</h3>
+          <div class="callout definition">
+            <span class="label">Definition</span>
+            <p>An <strong>externality</strong> occurs when an economic activity has a spillover cost to, or a spillover benefit for, a bystander.</p>
+            <ul style="margin-bottom:0;">
+              <li><strong>Negative externality:</strong> pollution, second-hand smoke, loud music, traffic congestion, littering.</li>
+              <li><strong>Positive externality:</strong> vaccination, education, a neighbour's garden, a beekeeper's bees.</li>
+              <li>Externalities can arise in <strong>production</strong> or <strong>consumption</strong>.</li>
+            </ul>
+          </div>
+          <div class="callout formula">
+            <span class="label">Social vs private</span>
+            <p class="formula-line">MSC = MPC + MEC</p>
+            <p class="formula-line">MSB = MPB + MEB</p>
+            <p>MSC = marginal social cost; MPC = marginal private cost; MEC = marginal external cost. MSB = marginal social benefit; MPB = marginal private benefit; MEB = marginal external benefit.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Externality</th><th>Free market</th><th>Social optimum</th><th>DWL</th></tr></thead>
+              <tbody>
+                <tr><td>Negative</td><td>Overproduces (ignores MEC)</td><td>Where MSB = MSC</td><td>Units between Q<sub>social</sub> and Q<sub>market</sub></td></tr>
+                <tr><td>Positive</td><td>Underproduces (ignores MEB)</td><td>Where MSB = MSC</td><td>Missing surplus from Q<sub>market</sub> to Q<sub>social</sub></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout example">
+            <span class="label">Electricity / haze</span>
+            <p>Electricity production emits pollutants. The firm pays MPC but society bears MSC = MPC + MEC. The market settles at demand = MPC, producing too much. The socially optimal quantity is where demand = MSC. The DWL is the triangle between MSC and demand over the overproduced units. The haze is a negative externality borne by Singaporeans; the market does not fix it because the polluter does not pay the full social cost.</p>
+          </div>
+          <div class="callout example">
+            <span class="label">Education / vaccination</span>
+            <p>Education raises wages, tax revenue, innovation and reduces crime; vaccination creates herd immunity. MSB &gt; MPB, so the market underproduces. A Pigouvian subsidy or a mandate can move quantity toward the social optimum.</p>
+          </div>
+          <div class="callout formula">
+            <span class="label">DWL with a constant external cost</span>
+            <p class="formula-line">Negative: DWL = ½ × MEC × (Q<sub>market</sub> − Q<sub>social</sub>)</p>
+            <p class="formula-line">Positive: DWL = ½ × MEB × (Q<sub>social</sub> − Q<sub>market</sub>)</p>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 640 380" role="img" aria-label="Negative externality diagram showing demand, marginal private cost, marginal social cost, market quantity, social quantity and deadweight loss">
+              <rect x="0" y="0" width="640" height="380" fill="#fffdf8"/>
+              <line class="axis" x1="60" y1="330" x2="615" y2="330"/>
+              <line class="axis" x1="60" y1="330" x2="60" y2="40"/>
+              <text x="625" y="325" text-anchor="end">Q</text>
+              <text x="48" y="50" text-anchor="end">P</text>
+              <line class="curve" x1="100" y1="70" x2="570" y2="310"/>
+              <line class="curve" x1="100" y1="310" x2="570" y2="200"/>
+              <line class="curve-accent" x1="100" y1="250" x2="570" y2="140"/>
+              <polygon class="shade" points="341.7,193.4 422.3,234.5 422.3,174.5"/>
+              <line class="dash" x1="341.7" y1="193.4" x2="341.7" y2="330"/>
+              <line class="dash" x1="422.3" y1="234.5" x2="422.3" y2="330"/>
+              <circle cx="341.7" cy="193.4" r="3.5" fill="#111"/>
+              <circle cx="422.3" cy="234.5" r="3.5" fill="#111"/>
+              <text class="lbl" x="548" y="305" text-anchor="end">Demand = MSB</text>
+              <text class="lbl" x="548" y="196" text-anchor="end">MPC</text>
+              <text class="lbl" x="548" y="137" text-anchor="end">MSC</text>
+              <text x="341.7" y="349" text-anchor="middle">Qs</text>
+              <text x="422.3" y="349" text-anchor="middle">Qm</text>
+              <text x="360" y="215" text-anchor="start">DWL</text>
+              <text x="500" y="182" text-anchor="middle">MEC</text>
+            </svg>
+            <figcaption><strong>Negative externality.</strong> MPC is the firm's private cost; MSC = MPC + MEC. The free market produces Qm where demand = MPC. The social optimum is Qs where demand = MSC. The shaded DWL is the cost of the units between Qs and Qm whose social cost exceeds their social benefit.</figcaption>
+          </figure>
+
+          <h3 id="s7-3">7.3 Solutions: Coase, command-and-control, Pigouvian tools</h3>
+          <p>The unifying idea is to <strong>internalise the externality</strong>: make the decision-maker face the social cost or benefit.</p>
+          <div class="split">
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Coase theorem</span>
+              <p>Private bargaining can reach an efficient outcome without government intervention if <strong>property rights are well defined</strong> and <strong>transaction costs are low</strong>.</p>
+              <p>Works for two HDB neighbours negotiating over noise. Fails for a power plant and 100,000 fishermen: too many parties, unclear rights, high negotiation costs.</p>
+            </div>
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Government tools</span>
+              <ul style="margin-bottom:0;">
+                <li><strong>Command-and-control:</strong> directly regulate quantity, technology or behaviour (COE quota, ban on a polluting technology, mandatory vaccination).</li>
+                <li><strong>Market-based:</strong> Pigouvian tax on negative externalities, Pigouvian subsidy on positive ones, tradable permits.</li>
+              </ul>
+            </div>
+          </div>
+          <p>A <strong>Pigouvian tax</strong> equal to MEC at the social optimum shifts the firm's private cost up to social cost. A <strong>Pigouvian subsidy</strong> equal to MEB shifts demand up to social benefit.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Singapore example</th><th>Type</th><th>How it works</th></tr></thead>
+              <tbody>
+                <tr><td>COE quota</td><td>Command-and-control</td><td>Caps the number of cars directly.</td></tr>
+                <tr><td>Carbon tax</td><td>Pigouvian tax</td><td>Makes emitters pay for some environmental cost.</td></tr>
+                <tr><td>Plastic bag charge</td><td>Pigouvian charge</td><td>Makes consumers face part of the external cost.</td></tr>
+                <tr><td>SkillsFuture Credit</td><td>Pigouvian subsidy</td><td>Shifts demand for training toward the social optimum.</td></tr>
+                <tr><td>Childhood vaccination mandate</td><td>Command-and-control</td><td>Reaches the efficient quantity directly; herd immunity is the positive externality.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 id="s7-4">7.4 Public goods and the free-rider problem</h3>
+          <p>Goods differ in two dimensions: <strong>rivalry</strong> (does one person's consumption reduce what is available to others?) and <strong>excludability</strong> (can non-payers be prevented from consuming?).</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th></th><th>Excludable</th><th>Non-excludable</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Rival</strong></td><td>Private good: sandwich, seat at a concert</td><td>Common-pool resource: fishery, clean air</td></tr>
+                <tr><td><strong>Non-rival</strong></td><td>Club good: Netflix, toll road with no congestion</td><td>Public good: national defence, street light, fireworks</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>For a public good, people cannot be excluded, so each person has an incentive to benefit without paying. If everyone free-rides, voluntary contributions fall short and the good is underprovided. The standard solution is government provision financed by compulsory taxation.</p>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>A concert in a crowded auditorium is <strong>private</strong> (excludable and rival), not a public good. A street light is public (non-rival and non-excludable). A fishery is common-pool (rival but non-excludable).</p>
+          </div>
+
+          <h3 id="s7-5">7.5 Taxation and tax incidence</h3>
+          <p>A tax creates a wedge between the price buyers pay (P<sub>c</sub>) and the price sellers keep (P<sub>s</sub>):</p>
+          <p class="formula-line">P<sub>c</sub> − P<sub>s</sub> = tax per unit</p>
+          <div class="callout definition">
+            <span class="label">Statutory vs economic incidence</span>
+            <p>Statutory incidence is who is legally required to pay. Economic incidence is who actually bears the burden. They are not the same. A tax on sellers and the same tax on buyers produce the same economic outcome: same quantity, same price wedge, same deadweight loss.</p>
+          </div>
+          <div class="callout formula">
+            <span class="label">The elasticity rule</span>
+            <p>The burden falls more heavily on the side of the market that is <strong>less elastic</strong> — the side that finds it harder to change quantity.</p>
+            <ul style="margin-bottom:0;">
+              <li>Supply more elastic than demand → buyers bear more.</li>
+              <li>Demand more elastic than supply → sellers bear more.</li>
+              <li>Perfectly inelastic demand → buyers bear all; perfectly inelastic supply → sellers bear all.</li>
+            </ul>
+          </div>
+          <p>For linear demand Q<sub>d</sub> = a − bP and supply Q<sub>s</sub> = c + dP, the consumer share of the tax is d/(b + d) and the producer share is b/(b + d).</p>
+          <div class="callout example">
+            <span class="label">Worked example</span>
+            <p>A $3 tax raises the consumer price from $3 to $5. Consumers bear $2 of the $3, or 67%; producers bear $1, or 33%. Tax revenue = t × Q<sub>1</sub>; DWL = ½t(Q<sub>0</sub> − Q<sub>1</sub>).</p>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 640 380" role="img" aria-label="Tax incidence diagram showing demand, supply, supply plus tax, consumer price, producer price, tax revenue and deadweight loss">
+              <rect x="0" y="0" width="640" height="380" fill="#fffdf8"/>
+              <line class="axis" x1="60" y1="330" x2="615" y2="330"/>
+              <line class="axis" x1="60" y1="330" x2="60" y2="40"/>
+              <text x="625" y="325" text-anchor="end">Q</text>
+              <text x="48" y="50" text-anchor="end">P</text>
+              <line class="curve" x1="100" y1="70" x2="570" y2="310"/>
+              <line class="curve" x1="100" y1="310" x2="570" y2="200"/>
+              <rect class="shade-soft" x="60" y="200.3" width="295.1" height="50"/>
+              <line class="curve-accent" x1="100" y1="260" x2="570" y2="150"/>
+              <polygon class="shade" points="355.1,200.3 422.3,234.5 355.1,250.3"/>
+              <line class="dash" x1="355.1" y1="200.3" x2="355.1" y2="330"/>
+              <line class="dash" x1="422.3" y1="234.5" x2="422.3" y2="330"/>
+              <line class="dash" x1="60" y1="200.3" x2="355.1" y2="200.3"/>
+              <line class="dash" x1="60" y1="250.3" x2="355.1" y2="250.3"/>
+              <circle cx="355.1" cy="200.3" r="3.5" fill="#111"/>
+              <circle cx="422.3" cy="234.5" r="3.5" fill="#111"/>
+              <text class="lbl" x="548" y="305" text-anchor="end">Demand</text>
+              <text class="lbl" x="548" y="196" text-anchor="end">Supply</text>
+              <text class="lbl" x="548" y="146" text-anchor="end">Supply + tax</text>
+              <text x="54" y="204" text-anchor="end">Pc</text>
+              <text x="54" y="254" text-anchor="end">Ps</text>
+              <text x="355.1" y="349" text-anchor="middle">Q1</text>
+              <text x="422.3" y="349" text-anchor="middle">Q0</text>
+              <text x="208" y="224" text-anchor="middle">tax revenue</text>
+              <text x="378" y="246" text-anchor="start">DWL</text>
+            </svg>
+            <figcaption><strong>Tax incidence.</strong> The tax creates a vertical wedge between the price consumers pay (Pc) and the price sellers keep (Ps). The shaded rectangle is tax revenue; the small triangle is deadweight loss. The side of the market that is less elastic bears more of the wedge.</figcaption>
+          </figure>
+
+          <h3 id="s7-6">7.6 Price controls</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th></th><th>Price ceiling</th><th>Price floor</th></tr></thead>
+              <tbody>
+                <tr><td>Binding condition</td><td>Set below equilibrium</td><td>Set above equilibrium</td></tr>
+                <tr><td>Result</td><td>Shortage: Q<sub>d</sub> &gt; Q<sub>s</sub></td><td>Surplus: Q<sub>s</sub> &gt; Q<sub>d</sub></td></tr>
+                <tr><td>Quantity traded</td><td>Q<sub>s</sub> (short side)</td><td>Q<sub>d</sub> (short side)</td></tr>
+                <tr><td>Winners</td><td>Buyers who can purchase at the lower price</td><td>Sellers who can sell at the higher price</td></tr>
+                <tr><td>Losers</td><td>Producers; buyers who cannot get the good</td><td>Consumers; sellers who cannot sell</td></tr>
+                <tr><td>DWL</td><td>Triangle from Q<sub>s</sub> to Q<sub>0</sub></td><td>Triangle from Q<sub>d</sub> to Q<sub>0</sub></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A control that does not bind has no effect: a ceiling above equilibrium or a floor below equilibrium.</p>
+          <div class="callout example">
+            <span class="label">Rent control</span>
+            <p>Equilibrium rent $1,200; ceiling $750. Quantity supplied falls, quantity demanded rises, shortage. Some tenants gain, others lose because they cannot find a flat; landlords lose; DWL arises. The long-run supply of rental housing may shrink further.</p>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 640 380" role="img" aria-label="Price ceiling diagram showing demand, supply, equilibrium, ceiling, quantity supplied, quantity demanded and shortage">
+              <rect x="0" y="0" width="640" height="380" fill="#fffdf8"/>
+              <line class="axis" x1="60" y1="330" x2="615" y2="330"/>
+              <line class="axis" x1="60" y1="330" x2="60" y2="40"/>
+              <text x="625" y="325" text-anchor="end">Q</text>
+              <text x="48" y="50" text-anchor="end">P</text>
+              <line class="curve" x1="100" y1="70" x2="570" y2="310"/>
+              <line class="curve" x1="100" y1="310" x2="570" y2="200"/>
+              <line class="curve-accent" x1="60" y1="280" x2="600" y2="280"/>
+              <line class="bracket" x1="228.2" y1="280" x2="511.2" y2="280"/>
+              <line class="bracket" x1="228.2" y1="274" x2="228.2" y2="286"/>
+              <line class="bracket" x1="511.2" y1="274" x2="511.2" y2="286"/>
+              <line class="dash" x1="228.2" y1="280" x2="228.2" y2="330"/>
+              <line class="dash" x1="511.2" y1="280" x2="511.2" y2="330"/>
+              <circle cx="228.2" cy="280" r="3.5" fill="#111"/>
+              <circle cx="511.2" cy="280" r="3.5" fill="#111"/>
+              <text class="lbl" x="548" y="305" text-anchor="end">Demand</text>
+              <text class="lbl" x="548" y="196" text-anchor="end">Supply</text>
+              <text class="lbl" x="590" y="272" text-anchor="end">Ceiling</text>
+              <text x="228.2" y="349" text-anchor="middle">Qs</text>
+              <text x="511.2" y="349" text-anchor="middle">Qd</text>
+              <text x="370" y="270" text-anchor="middle">shortage</text>
+            </svg>
+            <figcaption><strong>Binding price ceiling.</strong> A ceiling below equilibrium holds the price down. Quantity supplied is Qs; quantity demanded is Qd. The gap is a shortage. Quantity traded is the short side, Qs. The control creates deadweight loss and makes some buyers worse off because they cannot get the good at all.</figcaption>
+          </figure>
+
+          <h3 id="s7-7">7.7 Government failure, equity and efficiency</h3>
+          <p><strong>Government failure</strong> is inefficiency caused by intervention itself:</p>
+          <ol class="clean-list">
+            <li>Deadweight losses from taxes and price controls.</li>
+            <li>Bureaucracy and enforcement costs.</li>
+            <li>Corruption and rent-seeking.</li>
+            <li>Underground economy and evasion.</li>
+          </ol>
+          <p>The <strong>equity–efficiency trade-off</strong> is the balance between a fair distribution and maximising total surplus. A policy can improve equity while reducing efficiency. Economics can describe the trade-off; it cannot decide the values.</p>
+          <div class="callout note">
+            <span class="label">Singapore fiscal facts (Week 5)</span>
+            <ul style="margin-bottom:0;">
+              <li>Singapore usually runs budget surpluses, not deficits. FY2025 revised surplus: about S$15.1 billion (1.9% of GDP).</li>
+              <li>Corporate income tax is the largest revenue source (22.3%); NIRC (investment returns on reserves) is second (17.4%), ahead of GST (13.5%) and personal income tax (13.0%).</li>
+              <li>Social development is 49.0% of spending; security and external relations 27.1%; economic development 20.2%; government administration 3.7%.</li>
+              <li>Personal income tax is progressive: 0% on the first $20,000, rising to 24% above $1,000,000.</li>
+              <li>Gini fell from 0.435 before taxes and transfers to 0.364 after in 2024.</li>
+            </ul>
+          </div>
+
+          <div class="callout exam">
+            <span class="label">Chapter 7 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Find market and socially optimal quantities with MEC/MEB.</li>
+              <li>Compute DWL and the Pigouvian tax/subsidy.</li>
+              <li>Classify goods by rivalry and excludability; explain free-riding.</li>
+              <li>Apply the elasticity rule to tax incidence; compute consumer share, revenue and DWL.</li>
+              <li>Analyse binding price ceilings/floors and identify winners/losers.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-government-failure">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 8 ================= -->
+        <section class="chapter" id="ch-macro-measurement">
+          <span class="week-chip">Week 6 · The Wealth of Nations</span>
+          <h2><span class="ch-no">Chapter 08</span>Measuring the Macroeconomy</h2>
+          <p class="chapter-lede">GDP measures the market value of final goods and services produced within a country in a period. It can be measured three ways, but it is not a measure of wealth or well-being. Real GDP removes price changes; CPI and the GDP deflator measure prices.</p>
+
+          <h3 id="s8-1">8.1 Macro questions and time horizons</h3>
+          <p>Macroeconomics studies the whole economy: living standards, economic fluctuations and the cost of living.</p>
+          <div class="callout note">
+            <span class="label">Singapore 2025 snapshot (Week 6)</span>
+            <p>The economy grew 5.0% in 2025. CPI-All Items rose 0.9%; MAS core inflation was 0.7%. Unemployment was 2.0% in Q4 2025. Growth was led by AI-related electronics, finance and wholesale trade; food and beverage services contracted. GDP per person is among the highest in the world.</p>
+          </div>
+          <ul class="clean-list">
+            <li><strong>Long run (decades):</strong> economic growth — why output per person rises.</li>
+            <li><strong>Short run (quarters/years):</strong> business cycles and recessions — why activity rises and falls.</li>
+          </ul>
+          <p>A <strong>recession</strong> is a significant decline in economic activity; a common rule of thumb is two consecutive quarters of declining real GDP. The <strong>unemployment rate</strong> is the percentage of the labour force without a job and actively seeking work.</p>
+
+          <h3 id="s8-2">8.2 GDP and the three approaches</h3>
+          <div class="callout definition">
+            <span class="label">GDP</span>
+            <p>The market value of all <strong>final</strong> goods and services produced <strong>within a country</strong> during a <strong>given period</strong>.</p>
+            <ul style="margin-bottom:0;">
+              <li><strong>Market value:</strong> allows different goods to be added together.</li>
+              <li><strong>Final goods and services:</strong> avoids double counting.</li>
+              <li><strong>Within a country:</strong> based on where production occurs.</li>
+              <li><strong>During a period:</strong> current production, not wealth.</li>
+            </ul>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Approach</th><th>What it sums</th><th>Formula / example</th></tr></thead>
+              <tbody>
+                <tr><td>Production</td><td>Value added by each firm</td><td>Sales − intermediate purchases</td></tr>
+                <tr><td>Expenditure</td><td>Purchases of final output</td><td>GDP = C + I + G + (X − M)</td></tr>
+                <tr><td>Income</td><td>Income generated by production</td><td>Wages + profits + rents + interest + production taxes net of subsidies</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Production = expenditure = income because every dollar of production is a dollar of expenditure and a dollar of income, as the circular flow shows.</p>
+          <div class="callout example">
+            <span class="label">Value added</span>
+            <p>A coffee supplier sells beans for $0.25; the cafe sells the cup for $2.00. Counting both sales would double-count the beans. Value added: supplier $0.25 + cafe $1.75 = $2.00.</p>
+          </div>
+
+          <h3 id="s8-3">8.3 Expenditure components: what counts?</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Component</th><th>Includes</th><th>Does not include</th></tr></thead>
+              <tbody>
+                <tr><td><strong>C</strong> consumption</td><td>Household spending on durable goods, non-durables and services</td><td>New housing (investment); resale housing (not current production)</td></tr>
+                <tr><td><strong>I</strong> investment</td><td>New capital, new residential construction, inventory changes</td><td>Shares, bonds, resale assets</td></tr>
+                <tr><td><strong>G</strong> government</td><td>Government purchases of goods and services: healthcare, education, defence</td><td>Transfers: GST vouchers, Workfare, pensions</td></tr>
+                <tr><td><strong>X − M</strong> net exports</td><td>Exports: domestically produced goods sold abroad, foreign tourist spending</td><td>Imports: goods produced abroad, Singapore residents' spending abroad</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Imports are subtracted because they may already appear in C, I or G but were not produced domestically. A $1,500 imported laptop raises C by $1,500 and M by $1,500, so the net effect on GDP is zero.</p>
+          <div class="callout note">
+            <span class="label">Why Singapore's exports exceed GDP</span>
+            <p>Exports measure gross value sold abroad; GDP measures value added domestically. Singapore imports many components, processes or re-exports them. Gross trade flows are much larger than domestic value added. Once imports are subtracted, the expenditure associated with domestic production remains.</p>
+          </div>
+
+          <div class="callout note">
+            <span class="label">Singapore 2025 (Week 6 data)</span>
+            <p>GDP was about S$789.5 billion, or about S$129,200 per person (population 6.11 million). Expenditure components: C S$245.5b, I S$177.5b, G S$80.9b, X S$1,404.2b, M S$1,124.7b. Exports are larger than GDP because they measure gross value sold abroad; GDP measures value added domestically after subtracting imported inputs.</p>
+          </div>
+
+          <h3 id="s8-4">8.4 GDP vs GNI</h3>
+          <div class="callout formula">
+            <span class="label">GNI</span>
+            <p class="formula-line">GNI = GDP + (income received from abroad − income paid abroad)</p>
+          </div>
+          <ul class="clean-list">
+            <li><strong>GDP:</strong> what is produced inside the country, whoever owns the firms or does the work.</li>
+            <li><strong>GNI:</strong> income earned by the country's residents, wherever it is produced.</li>
+          </ul>
+          <div class="callout example">
+            <span class="label">Cross-border worker</span>
+            <p>A Malaysian living in Johor commutes to Singapore. The wages are produced in Singapore → Singapore's GDP. The worker is not a Singapore resident, so the wages are income paid abroad and are subtracted in GNI. They are part of Malaysia's GNI. A Singapore resident working in Batam is the reverse: Indonesia's GDP, Singapore's GNI.</p>
+          </div>
+          <p>Singapore's GNI is below its GDP because income paid abroad, mainly profits of foreign-owned firms, exceeds income residents receive from abroad.</p>
+
+          <h3 id="s8-5">8.5 What GDP does not measure</h3>
+          <ul class="clean-list">
+            <li><strong>Unpaid production:</strong> childcare, cooking, household work.</li>
+            <li><strong>Underground activity:</strong> hidden or illegal transactions.</li>
+            <li><strong>Environmental costs:</strong> pollution and resource depletion are not deducted.</li>
+            <li><strong>Leisure:</strong> free time is not valued.</li>
+            <li><strong>Distribution:</strong> GDP per capita is an average; gains may be concentrated.</li>
+            <li><strong>Depreciation:</strong> GDP does not deduct wear and tear. NDP = GDP − depreciation.</li>
+          </ul>
+          <p>GDP is a flow variable; wealth is a stock variable. GDP per capita is a rough average living-standard measure, not a median and not a complete measure of well-being.</p>
+
+          <h3 id="s8-6">8.6 Real vs nominal GDP</h3>
+          <div class="callout formula">
+            <span class="label">Nominal and real</span>
+            <p class="formula-line">Nominal GDP = current prices × current quantities</p>
+            <p class="formula-line">Real GDP = base-year prices × current quantities</p>
+            <p class="formula-line">Real growth = (real GDP<sub>t</sub> − real GDP<sub>t−1</sub>) / real GDP<sub>t−1</sub> × 100</p>
+          </div>
+          <div class="callout example">
+            <span class="label">Two-good example</span>
+            <p>Base year 2024: coffee $5 × 100, sandwiches $10 × 50 → real GDP = $1,000. 2025: coffee $6 × 120, sandwiches $12 × 60 → nominal GDP = $1,440; real GDP at 2024 prices = $5×120 + $10×60 = $1,200. Nominal growth 44%, real growth 20%.</p>
+          </div>
+          <p>Economic growth is measured with real GDP because it isolates changes in the volume of production.</p>
+
+          <h3 id="s8-7">8.7 CPI, inflation and the GDP deflator</h3>
+          <div class="callout formula">
+            <span class="label">CPI and inflation</span>
+            <p class="formula-line">CPI = (cost of fixed basket at current prices ÷ cost of same basket at base prices) × 100</p>
+            <p class="formula-line">Inflation = % change in the price index</p>
+            <p class="formula-line">GDP deflator = (nominal GDP ÷ real GDP) × 100</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th></th><th>CPI</th><th>GDP deflator</th></tr></thead>
+              <tbody>
+                <tr><td>What prices?</td><td>Goods and services purchased by households</td><td>Goods and services produced domestically</td></tr>
+                <tr><td>Imports?</td><td>Can be included</td><td>Excluded</td></tr>
+                <tr><td>Basket</td><td>Fixed consumer basket</td><td>Changes with current production</td></tr>
+                <tr><td>Best for</td><td>Consumer cost of living</td><td>Prices of domestic output</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Inflation is the percentage change in the price level. A fall in inflation from 6% to 2% means prices are still rising, just more slowly. Deflation means the price level is falling.</p>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>CPI is a price <em>level</em> (base year = 100). Inflation is the <em>percentage change</em> in the index. Do not report the CPI as the inflation rate.</p>
+          </div>
+
+          <h3 id="s8-8">8.8 Saving and the open economy</h3>
+          <p>Saving is income not used for consumption or government purchases:</p>
+          <p class="formula-line">S = Y − C − G</p>
+          <p>Substitute the GDP identity Y = C + I + G + X − M:</p>
+          <p class="formula-line">S = I + NX &nbsp; or &nbsp; S − I = NX</p>
+          <p>In a closed economy, S = I. In an open economy, S and I can differ. If S &gt; I, the country lends the surplus abroad and runs a current account surplus (NX &gt; 0). Singapore saves more than it invests at home and runs a persistent current account surplus; foreign direct investment has also financed much of its capital stock.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 8 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Compute GDP by expenditure and value added.</li>
+              <li>Classify items as C, I, G, X, M or excluded, with reasons.</li>
+              <li>Compute GNI from GDP and income flows.</li>
+              <li>Compute nominal/real GDP, growth, CPI, inflation and the deflator.</li>
+              <li>Use S = Y − C − G and S − I = NX.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-macro-measurement">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 9 ================= -->
+        <section class="chapter" id="ch-productivity">
+          <span class="week-chip">Week 7 · What Makes Countries Rich?</span>
+          <h2><span class="ch-no">Chapter 09</span>Productivity: Why Countries Are Rich</h2>
+          <p class="chapter-lede">Income differences across countries are mostly productivity differences. Productivity comes from physical capital, human capital and technology. PPP is the correct way to compare living standards, and a country's income gap can be decomposed into a technology gap and a K/H gap.</p>
+
+          <h3 id="s9-1">9.1 Measuring prosperity across countries</h3>
+          <p><strong>GDP per capita</strong> = GDP ÷ population. It is an average measure of output per person.</p>
+          <p>Comparing countries is tricky because incomes are in different currencies. Two methods:</p>
+          <ol class="clean-list">
+            <li><strong>Market exchange rates:</strong> convert at the rate a money changer uses.</li>
+            <li><strong>Purchasing power parity (PPP):</strong> convert using what money can actually buy.</li>
+          </ol>
+          <div class="callout definition">
+            <span class="label">Why market exchange rates mislead</span>
+            <ul style="margin-bottom:0;">
+              <li><strong>Prices differ across countries.</strong> The same haircut, meal or bus ride costs much less in poorer countries. Exchange-rate conversion ignores this and understates what incomes there can buy.</li>
+              <li><strong>Exchange rates fluctuate</strong> with capital flows, interest rates and speculation — reasons unrelated to living standards.</li>
+            </ul>
+          </div>
+          <div class="callout formula">
+            <span class="label">PPP conversion</span>
+            <p class="formula-line">GDP<sub>PPP</sub> = local GDP per capita × (price in US$ ÷ price in local currency)</p>
+            <p>The Big Mac is a simple illustration. In practice, the World Bank prices a large standardised basket covering household goods, government services and investment goods.</p>
+          </div>
+          <div class="callout example">
+            <span class="label">China and Saudi Arabia (2019)</span>
+            <p>China: 90,182 yuan × (5.71/21.42) ≈ US$24,040 at PPP, versus US$13,050 at the market exchange rate. Saudi Arabia: 149,772 riyal × (5.71/13.98) ≈ US$61,173 at PPP, versus US$39,975 at the market rate.</p>
+            <p>PPP increases measured incomes most where prices are lowest. It narrows gaps but does not eliminate them: even after PPP, the average American is about 2.7× richer than the average Chinese.</p>
+          </div>
+
+          <h3 id="s9-2">9.2 From income per person to productivity</h3>
+          <div class="callout formula">
+            <span class="label">Productivity decomposition</span>
+            <p class="formula-line">GDP/Population = (GDP/Hours) × (Hours/Workers) × (Workers/Population)</p>
+            <p>The three terms are productivity (output per hour), hours per worker, and the share of the population working.</p>
+          </div>
+          <p>Hours per worker and the employment share cannot rise without limit. Sustained increases in income per person must come from higher <strong>productivity</strong>: the value of goods and services a worker produces per hour.</p>
+
+          <h3 id="s9-3">9.3 The aggregate production function</h3>
+          <div class="callout formula">
+            <span class="label">Production function</span>
+            <p class="formula-line">Y = A × F(K, H)</p>
+            <p>Y = GDP; K = physical capital; H = total efficiency units of labour; A = technology.</p>
+            <p class="formula-line">H = L × h</p>
+            <p>L = number of workers; h = average human capital per worker (schooling, skills, experience).</p>
+          </div>
+          <ul class="clean-list">
+            <li><strong>Physical capital (K):</strong> machines, buildings, infrastructure, computers.</li>
+            <li><strong>Human capital (H):</strong> knowledge, skills and experience embodied in workers.</li>
+            <li><strong>Technology (A):</strong> knowledge and efficiency — better ideas and better ways of producing.</li>
+          </ul>
+          <div class="callout definition">
+            <span class="label">Two properties</span>
+            <ol style="margin-bottom:0;">
+              <li><strong>More inputs increase output:</strong> holding other inputs fixed, more K or H raises output.</li>
+              <li><strong>Diminishing marginal product:</strong> each additional unit of K or H adds less output than the previous one, holding other inputs fixed.</li>
+            </ol>
+          </div>
+          <p>Technology shifts the entire production function upward: the same K and H produce more output. Capital accumulation moves the economy along the function; technology shifts the function.</p>
+          <div class="callout note">
+            <span class="label">Technology is not just machines</span>
+            <p>Technology has two components: scientific and technical knowledge, and the efficiency of production (the ability to get maximum output from given inputs). It is often embodied in factors: workers who know the latest software (H) and machines that carry new designs (K).</p>
+          </div>
+
+          <h3 id="s9-4">9.4 Decomposing cross-country income gaps</h3>
+          <p>The counterfactual: what would a country's GDP per worker be with <strong>US technology</strong> but its <strong>own K and H</strong>? This separates the technology gap from the K/H gap.</p>
+          <div class="callout formula">
+            <span class="label">Gap decomposition</span>
+            <p class="formula-line">Total gap = Technology gap × K and H gap</p>
+            <p>For India (2014, PPP): US GDP per worker $112,517; India $13,261; India with US technology $24,057.</p>
+            <ul style="margin-bottom:0;">
+              <li>Total gap = 112,517 ÷ 13,261 ≈ 8.5×.</li>
+              <li>Technology gap = 24,057 ÷ 13,261 ≈ 1.8× (about 80% higher output from US technology alone).</li>
+              <li>K and H gap = 112,517 ÷ 24,057 ≈ 4.7×.</li>
+              <li>Check: 1.8 × 4.7 ≈ 8.5.</li>
+            </ul>
+          </div>
+          <p>Technology matters, but it does not explain most of the US–India gap. Even with US technology, India would remain 4.7× poorer because of lower physical capital per worker and lower human capital. The poorest countries lag on all three: K, H and A.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Country</th><th>Total gap with US</th><th>Technology gap</th><th>K and H gap</th></tr></thead>
+              <tbody>
+                <tr><td>Pakistan</td><td>7.3×</td><td>1.3×</td><td>5.5×</td></tr>
+                <tr><td>India</td><td>8.5×</td><td>1.8×</td><td>4.7×</td></tr>
+                <tr><td>China</td><td>5.3×</td><td>2.0×</td><td>2.7×</td></tr>
+                <tr><td>Ghana</td><td>15.0×</td><td>2.9×</td><td>5.3×</td></tr>
+                <tr><td>Dem. Rep. of the Congo</td><td>29.9×</td><td>4.4×</td><td>6.8×</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 id="s9-5">9.5 The four workers</h3>
+          <p>The Week 7 recap compares a farmer in Nepal, a garment worker in Bangladesh, a software engineer in India and an office worker in Singapore. They all work hard; what differs is the capital, skills and technology each hour of work is combined with.</p>
+          <ul class="clean-list">
+            <li><strong>Farmer in Nepal:</strong> low K and A — hand tools and traditional methods.</li>
+            <li><strong>Garment worker in Bangladesh:</strong> low K per worker — fewer and simpler machines.</li>
+            <li><strong>Software engineer in India:</strong> high h, lower K and A — strong skills, but less capital and lower economy-wide efficiency.</li>
+            <li><strong>Office worker in Singapore:</strong> high K, H and A — modern equipment, educated workforce, efficient economy.</li>
+          </ul>
+
+          <div class="callout exam">
+            <span class="label">Chapter 9 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Convert income using market exchange rates and PPP; interpret the difference.</li>
+              <li>Use the productivity identity and explain why productivity drives long-run income.</li>
+              <li>Apply Y = A F(K,H), H = Lh, and diminishing marginal product.</li>
+              <li>Decompose a gap into technology and K/H components and check the multiplication.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-productivity">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 10 ================= -->
+        <section class="chapter" id="ch-growth">
+          <span class="week-chip">Week 9 + Week 12 final review · How Do Countries Become Richer Over Time?</span>
+          <h2><span class="ch-no">Chapter 10</span>Economic Growth</h2>
+          <p class="chapter-lede">Growth is the percentage change in real GDP per capita over time. Small growth differences compound into large income differences. Capital accumulation alone cannot sustain growth because of diminishing returns; technology is the engine. Poor countries can catch up by adopting technology, but catch-up is not automatic.</p>
+
+          <h3 id="s10-1">10.1 Growth rates and why percentages matter</h3>
+          <div class="callout formula">
+            <span class="label">Growth rate</span>
+            <p class="formula-line">g = (y<sub>t</sub> − y<sub>t−1</sub>) ÷ y<sub>t−1</sub> × 100</p>
+          </div>
+          <p>Growth is measured as a percentage change, not a dollar change. A $1,000 increase means 50% at $2,000 but 1% at $100,000. Percentage changes allow comparisons across countries and over time.</p>
+          <p>Year-to-year growth is volatile: positive in expansions, negative in recessions. Economic growth is about the long-run average, not any single year. Singapore averaged about 4.8% per year from 1965 to 2025.</p>
+
+          <h3 id="s10-2">10.2 Compounding, the exponential formula and the Rule of 70</h3>
+          <div class="callout formula">
+            <span class="label">Exponential growth</span>
+            <p class="formula-line">y<sub>t</sub> = (1 + g)<sup>t</sup> × y<sub>0</sub></p>
+            <p class="formula-line">g = (y<sub>t</sub> ÷ y<sub>0</sub>)<sup>1/t</sup> − 1</p>
+            <p class="formula-line">Rule of 70: doubling time ≈ 70 ÷ g(%)</p>
+            <p class="formula-line">Backwards: g(%) ≈ 70 ÷ doubling time</p>
+          </div>
+          <div class="callout example">
+            <span class="label">Why 1 percentage point matters</span>
+            <p>Countries A and B both start at $50,000. A grows at 2%, B at 3%, for 40 years.</p>
+            <ul style="margin-bottom:0;">
+              <li>A: 50,000 × 1.02<sup>40</sup> ≈ $110,400.</li>
+              <li>B: 50,000 × 1.03<sup>40</sup> ≈ $163,100.</li>
+              <li>B ends about $52,700 (roughly 48%) richer from a one-point difference.</li>
+            </ul>
+          </div>
+          <div class="callout example">
+            <span class="label">Rule of 70 examples</span>
+            <p>At 2% growth, income doubles in 35 years. If income doubled in 10 years, growth was about 7%; if it took 23 years, about 3%.</p>
+            <p>A country at $4,000 wants to double in 15 years. Exact: g = 2<sup>1/15</sup> − 1 ≈ 4.7%. Rule of 70: 70 ÷ 15 ≈ 4.7%.</p>
+          </div>
+          <p>On a <strong>log scale</strong>, a constant growth rate is a straight line, and the slope is the growth rate. Equal distances represent equal percentage changes. This is why long-run growth charts use proportional axes.</p>
+
+          <h3 id="s10-3">10.3 Sources of growth: K, H and A</h3>
+          <p>Growth means raising one or more inputs in Y = A F(K,H):</p>
+          <ul class="clean-list">
+            <li><strong>Physical capital accumulation:</strong> investment in factories, machines and infrastructure.</li>
+            <li><strong>Human capital:</strong> more workers (L) or more skill per worker (h).</li>
+            <li><strong>Technology:</strong> new ideas, new goods and more efficient production.</li>
+          </ul>
+          <div class="callout formula">
+            <span class="label">Saving and investment</span>
+            <p>Closed economy, no government: Y = C + I and Y = C + S, so I = S.</p>
+            <p class="formula-line">S = I + NX &nbsp; or &nbsp; S − I = NX</p>
+            <p>In an open economy, saving and investment can differ. S &gt; I → the country lends abroad and runs a surplus; S &lt; I → it borrows from abroad.</p>
+          </div>
+          <p>Households divide income between consumption now and saving for later. The interest rate is the reward for saving. A higher saving rate can raise investment and the capital stock, but saving is a choice, so capital accumulation reflects households' choices.</p>
+          <p>Singapore has very high national saving, supported in part by CPF. It saves more than it invests at home and runs a persistent current account surplus; foreign direct investment has also financed much of its capital stock.</p>
+
+          <h3 id="s10-4">10.4 Why capital accumulation alone cannot sustain growth</h3>
+          <p>With diminishing marginal product, each extra unit of capital adds less output than the last. If investment continues at the same pace, output grows by smaller and smaller amounts, so the growth rate falls.</p>
+          <p>To keep growth up, the investment share of GDP would have to keep rising. But it cannot rise forever: it can never exceed 100% of GDP, and every dollar invested is a dollar not consumed.</p>
+          <div class="callout example">
+            <span class="label">Singapore's investment rate</span>
+            <p>Investment was about one-fifth of GDP in 1965, almost half by 1984, and then fell back to roughly 20–30% of GDP. Growth slowed from about 8.3% a year (1965–80) to about 2.5% (2010–25). Capital accumulation was important, but it could not keep raising the growth rate indefinitely.</p>
+          </div>
+          <p><strong>Technology</strong> avoids these limits. Better ideas raise output from the same K and H, shifting the production function upward. New ideas can build on existing knowledge, so technological progress can continue over time. The price of light — candles to oil lamps to gas to electric bulbs to LEDs — is the classic illustration: the same input (light) became dramatically cheaper.</p>
+
+          <h3 id="s10-5">10.5 Growth in history: Malthus and the Industrial Revolution</h3>
+          <p>For most of human history, living standards were roughly stagnant.</p>
+          <div class="callout definition">
+            <span class="label">The Malthusian trap</span>
+            <p>Better harvests or new technology raised output, but the extra food supported a larger population. Income per person returned to roughly subsistence. Productivity gains showed up as more people, not richer people.</p>
+          </div>
+          <p>The escape required two changes:</p>
+          <ol class="clean-list">
+            <li><strong>Continuous technological progress</strong> in production, transport and agriculture, so output grew faster than population.</li>
+            <li><strong>The demographic transition:</strong> as people moved from rural farms to urban factories, fertility fell. Slower population growth meant higher output became higher income per person.</li>
+          </ol>
+          <p>The Industrial Revolution began around 1800. Mechanised production, steam power, mechanised agriculture and new transport raised output per worker. New technology also encouraged capital investment: firms built factories and bought machines, giving workers more capital, which raised productivity. Technological progress and capital accumulation reinforced each other.</p>
+          <p>Sustained growth is historically new: about 200 years in a very long human history. Pre-modern times had little sustained growth; the Industrial Revolution began to raise output per worker; the post-industrial period has sustained growth driven by transport, communications, electricity and computers.</p>
+
+          <h3 id="s10-6">10.6 Growth accounting: technology as the residual</h3>
+          <div class="callout formula">
+            <span class="label">Growth accounting</span>
+            <p class="formula-line">Growth of GDP per hour = contribution of K + contribution of H + contribution of A</p>
+            <p class="formula-line">A = total growth − K contribution − H contribution</p>
+            <p class="formula-line">Technology's share = A ÷ total growth</p>
+          </div>
+          <p>K and H can be measured directly. Technology cannot, so it is the <strong>residual</strong>: whatever K and H fail to explain.</p>
+          <div class="callout example">
+            <span class="label">Worked example · 1970s US</span>
+            <p>GDP per hour grew 1.95%; capital contributed 0.67 pp; human capital 0.01 pp. A = 1.95 − 0.67 − 0.01 = 1.27 pp. Technology's share = 1.27 ÷ 1.95 ≈ 65%.</p>
+          </div>
+          <div class="callout example">
+            <span class="label">Worked example · 1980s and a correction</span>
+            <p>1980s: total 1.47%, K 0.51 pp, H 0.29 pp → A = 0.67 pp, share 46%. If capital's true contribution was 0.80 pp, A = 1.47 − 0.80 − 0.29 = 0.38 pp, share 26%. Undercounting K overstates A, because the residual inherits every measurement error.</p>
+          </div>
+          <p>In the US from 1950 to 2007, technology averaged about 1.44 pp of 2.24% annual growth, about 65%. Physical capital contributed about 26%, human capital about 9%. In every decade except the 1980s, technology explained roughly two-thirds of growth.</p>
+          <div class="callout trap">
+            <span class="label">Exam trap</span>
+            <p>Contributions are <strong>percentage points</strong>; shares are <strong>percentages</strong>. Do not report "technology grew 1.4%" when the contribution is 1.4 pp.</p>
+          </div>
+
+          <h3 id="s10-7">10.7 Catch-up vs sustained growth</h3>
+          <div class="split">
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Catch-up growth</span>
+              <p>Poor countries grow faster by adopting the production methods and technologies of richer countries. Adoption can be faster and cheaper than invention. Examples: Chile, Hong Kong, South Korea, Singapore.</p>
+              <p>Not guaranteed: Argentina was among the richest countries around 1900 and fell far behind.</p>
+            </div>
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">Sustained growth</span>
+              <p>Positive, relatively steady growth over 50, 100 or 200 years. At the technological frontier there is little to copy, so growth depends on new ideas. Examples: UK, US, France, Spain at roughly 1.2–2% a year since 1820.</p>
+            </div>
+          </div>
+          <div class="callout formula">
+            <span class="label">Catch-up equation</span>
+            <p>Country P starts at a fraction f of the leader. P grows at g<sub>P</sub>, the leader at g<sub>L</sub>. Catch-up occurs when:</p>
+            <p class="formula-line">f × (1 + g<sub>P</sub>)<sup>t</sup> = (1 + g<sub>L</sub>)<sup>t</sup></p>
+            <p class="formula-line">t = ln(1/f) ÷ ln[(1 + g<sub>P</sub>)/(1 + g<sub>L</sub>)]</p>
+          </div>
+          <div class="callout example">
+            <span class="label">Week 12 catch-up problem</span>
+            <p>P's income is a quarter of Singapore's. P grows at 6%, Singapore at 2.5%.</p>
+            <p class="formula-line">0.25 × 1.06<sup>t</sup> = 1 × 1.025<sup>t</sup> → (1.06/1.025)<sup>t</sup> = 4</p>
+            <p class="formula-line">t = ln 4 ÷ ln 1.0341 ≈ 41 years</p>
+            <p>For P to keep growing at 6%, capital must stay scarce enough for investment to pay off, technology must still be available to adopt, and P must keep adopting it. Diminishing returns will slow P as it catches up, so 41 years is optimistic.</p>
+          </div>
+          <p>Some poor countries caught up rapidly (Singapore: $2,664 in 1960 to $79,843 in 2017, 6.2% a year); others fell further behind (Central African Republic, Niger). Starting poor does not guarantee catching up. South Korea went from about 10% of US income in 1960 to about 65% by 2016; China was flat until about 1990, then rose fast; Mexico and Brazil did not sustain catch-up.</p>
+          <p>Once at the frontier, growth settles around 1–2% a year. That is why Singapore's growth slowed from 8.3% when poor to about 2.5% when rich.</p>
+
+          <h3 id="s10-8">10.8 Growth, inequality and poverty</h3>
+          <p>The evidence shows a <strong>negative relationship</strong> between a country's average growth rate and the change in its poverty rate: faster-growing countries tend to see larger falls in poverty. China is the prominent example.</p>
+          <ul class="clean-list">
+            <li>Correlation is not causation: growth and poverty reduction may both be driven by better institutions.</li>
+            <li>Growth does not guarantee that gains are shared; distribution matters.</li>
+            <li>Growth is not the only thing that matters, but no country has ended mass poverty without it.</li>
+          </ul>
+
+          <h3 id="s10-9">10.9 Week 12 worked problems</h3>
+          <details class="worked">
+            <summary>Problem 1 · 40 years at 2% vs 3%</summary>
+            <p>A: 50,000 × 1.02<sup>40</sup> ≈ $110,400. B: 50,000 × 1.03<sup>40</sup> ≈ $163,100. B is about 48% richer.</p>
+          </details>
+          <details class="worked">
+            <summary>Problem 2 · Rule of 70</summary>
+            <p>At 2%, doubling takes 35 years. A 10-year doubling implies 7% growth; a 23-year doubling implies about 3%.</p>
+          </details>
+          <details class="worked">
+            <summary>Problem 3 · double in 15 years</summary>
+            <p>g = 2<sup>1/15</sup> − 1 ≈ 4.7%. Rule of 70: 70/15 ≈ 4.7%. Check: 4,000 × 1.047<sup>15</sup> ≈ 8,000.</p>
+          </details>
+          <details class="worked">
+            <summary>Problem 4 · catch-up</summary>
+            <p>0.25 × 1.06<sup>t</sup> = 1.025<sup>t</sup> → t = ln 4 / ln(1.06/1.025) ≈ 41 years.</p>
+          </details>
+          <details class="worked">
+            <summary>Problem 5 · residual</summary>
+            <p>1980s: A = 1.47 − 0.51 − 0.29 = 0.67 pp; share = 0.67/1.47 ≈ 46%.</p>
+          </details>
+          <details class="worked">
+            <summary>Problem 6 · compounding and average growth</summary>
+            <p>(a) 4,000 × 1.04<sup>35</sup> ≈ $15,784. (b) (10,000/2,000)<sup>1/35</sup> − 1 ≈ 4.7%.</p>
+          </details>
+          <details class="worked">
+            <summary>Problem 7 · growth accounting</summary>
+            <p>A = 3.0 − 1.2 − 0.4 = 1.4 pp; share 47%. With K = 1.6: A = 1.0 pp; share 33%. Undercounting K overstates A.</p>
+          </details>
+
+          <div class="callout exam">
+            <span class="label">Chapter 10 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Compute growth rates, future levels, average growth and doubling time.</li>
+              <li>Explain why capital accumulation cannot sustain growth; use diminishing returns and the investment ceiling.</li>
+              <li>Compute the technology residual and its share; explain the measurement caveat.</li>
+              <li>Write and solve the catch-up equation; explain why catch-up is not automatic.</li>
+              <li>Discuss growth and poverty with the correlation-causation caveat.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-growth">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 11 ================= -->
+        <section class="chapter" id="ch-institutions">
+          <span class="week-chip">Week 10 · Why Do Some Countries Prosper While Others Remain Poor?</span>
+          <h2><span class="ch-no">Chapter 11</span>Institutions &amp; Prosperity</h2>
+          <p class="chapter-lede">The proximate causes of prosperity are K, H and A. The fundamental causes are geography, culture and institutions. The evidence — the two Koreas, Austria/Czechoslovakia, the reversal of fortune — points to institutions as the most important, because they shape the incentives to accumulate K, H and A.</p>
+
+          <h3 id="s11-1">11.1 Proximate vs fundamental causes</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Proximate causes</th><th>Fundamental causes</th></tr></thead>
+              <tbody>
+                <tr><td>Physical capital</td><td>Geography</td></tr>
+                <tr><td>Human capital</td><td>Culture</td></tr>
+                <tr><td>Technology</td><td>Institutions</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The framework: fundamental causes → incentives → accumulation of K, H and A → productivity → GDP per capita. Proximate causes directly raise output; fundamental causes explain why countries have different amounts of the proximate factors.</p>
+
+          <h3 id="s11-2">11.2 Geography hypothesis</h3>
+          <p><strong>Claim:</strong> differences in geography, climate and ecology ultimately explain prosperity. Tropical climates may reduce work effort and are more prone to infectious diseases, lowering productivity.</p>
+          <ul class="clean-list">
+            <li><strong>Evidence for:</strong> many of the poorest countries are in or near the tropics; most of the richest are in temperate zones.</li>
+            <li><strong>Problem:</strong> this is a correlation. Tropical countries may share other features, especially institutions.</li>
+            <li><strong>Not destiny:</strong> disease eradication and technology can offset geography. Singapore is about 1° north of the equator, was historically malarial, and is among the world's richest economies. It was certified malaria-free by the WHO in 1982; Lee Kuan Yew called air conditioning one of the signal inventions of history.</li>
+          </ul>
+
+          <h3 id="s11-3">11.3 Culture hypothesis</h3>
+          <p><strong>Claim:</strong> values and beliefs explain prosperity. Some cultures encourage saving, investment, hard work and openness to new technology.</p>
+          <p>Max Weber (1905) argued that Protestant beliefs led to greater work effort and higher saving, explaining why northern Europe industrialized first. The problem: culture is hard to change quickly, and similar cultures can have very different outcomes. If culture drove prosperity, similar cultures should see similar outcomes.</p>
+
+          <h3 id="s11-4">11.4 Institutions hypothesis</h3>
+          <div class="callout definition">
+            <span class="label">Institutions</span>
+            <p>The rules of the game: how societies organize themselves and shape the incentives of individuals and businesses.</p>
+            <p>Three features:</p>
+            <ol style="margin-bottom:0;">
+              <li>Determined by individuals and societies — they can change.</li>
+              <li>Place constraints on behaviour.</li>
+              <li>Shape behaviour through incentives.</li>
+            </ol>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Inclusive institutions</th><th>Extractive institutions</th></tr></thead>
+              <tbody>
+                <tr><td>Protect property rights</td><td>Weak property rights</td></tr>
+                <tr><td>Enforce contracts</td><td>Corruption and arbitrary rules</td></tr>
+                <tr><td>Encourage competition and entry</td><td>Markets controlled by elites; entry restricted</td></tr>
+                <tr><td>Reward innovation</td><td>Little incentive to innovate</td></tr>
+                <tr><td>Broad economic opportunities</td><td>Opportunities concentrated among a few</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Economic institutions concern economic transactions: property rights, impartial justice, financial arrangements, regulation of new businesses. Political institutions determine who makes the rules and how power is constrained.</p>
+          <div class="callout note">
+            <span class="label">Why this material is famous</span>
+            <p>The 2024 Nobel Prize in Economics went to Daron Acemoglu, Simon Johnson and James Robinson "for studies of how institutions are formed and affect prosperity." Acemoglu is the first author of the textbook. The key papers are "The Colonial Origins of Comparative Development" (2001) and "Reversal of Fortune" (2002).</p>
+          </div>
+
+          <h3 id="s11-5">11.5 Natural experiments</h3>
+          <div class="split">
+            <div class="callout example" style="margin-top:0;">
+              <span class="label">Korea</span>
+              <p>Before the 1940s, one country with shared geography, language, history and culture. Split along the 38th parallel in 1947–48; the North adopted a communist, centrally planned system; the South adopted a market-based economy with private property. By 2010, South Korea's GDP per capita was about 20 times the North's.</p>
+              <p>Both were run by autocrats; the difference was economic institutions, not democracy. South Korea democratized only in the late 1980s.</p>
+            </div>
+            <div class="callout example" style="margin-top:0;">
+              <span class="label">Austria and Czechoslovakia</span>
+              <p>Both part of the Habsburg Empire for centuries, with shared rulers, laws, history and a largely Catholic population; neighbours with similar climate and geography. In 1948 a Soviet-backed coup made Czechoslovakia communist; Austria kept a market economy. By 1989 Austria's GDP per capita was almost double Czechoslovakia's. After 1989, the Czech Republic and Slovakia adopted inclusive institutions and began to close the gap.</p>
+            </div>
+          </div>
+          <p><strong>Limitations:</strong> only two cases, each could be special (war, foreign support, Soviet control), and both are temperate. That is why the reversal of fortune matters: it tests the geography hypothesis across many countries, including the tropics.</p>
+
+          <h3 id="s11-6">11.6 The entrepreneurship model</h3>
+          <p>Rank potential entrepreneurs from the most to least promising idea. The return curve slopes down: the best ideas go first.</p>
+          <div class="callout formula">
+            <span class="label">Model</span>
+            <p class="formula-line">Return: R(N) = a − bN</p>
+            <p class="formula-line">Enter if R ≥ opportunity cost W</p>
+            <p class="formula-line">Inclusive equilibrium: N* = (a − W)/b</p>
+          </div>
+          <ul class="clean-list">
+            <li><strong>Weak property rights:</strong> entrepreneurs keep only a share s of the return. The return curve shifts <strong>left</strong>; N falls. In the Week 10 example, 700 entrepreneurs fall to 300.</li>
+            <li><strong>Barriers to entry:</strong> licences, permits and regulations raise the cost line from W to W + E. N falls further. In the example, combined with weak property rights, only 100 entrepreneurs remain.</li>
+            <li><strong>Higher wages in regular jobs:</strong> opportunity cost rises, cost line shifts up, fewer entrepreneurs. This is not necessarily bad institutions; it reflects better outside options.</li>
+          </ul>
+          <div class="callout example">
+            <span class="label">Lima vs Singapore</span>
+            <p>In 1980s Lima, legally registering a one-worker garment workshop took 289 days and cost about US$1,231, roughly 31 times the monthly minimum wage. Most entrepreneurs stayed informal: no secure title, no collateral, no courts. In Singapore today, registering a company online through ACRA's BizFile+ typically takes 1–3 working days, with secure legal title, access to borrowing and enforceable contracts. The rules, not the idea, decide whether the business gets started.</p>
+          </div>
+
+          <h3 id="s11-7">11.7 The reversal of fortune</h3>
+          <p>Around 1500, parts of Latin America and India were among the world's wealthiest regions; North America and Australia were relatively sparsely populated and less developed. Today the ranking is reversed. What explains it?</p>
+          <div class="callout definition">
+            <span class="label">Proxies for prosperity in 1500</span>
+            <ul style="margin-bottom:0;">
+              <li><strong>Urbanisation:</strong> town dwellers do not grow their own food; large towns require an agricultural surplus.</li>
+              <li><strong>Population density:</strong> before industrialisation, extra productivity led to more people, not richer people (Malthusian logic), so productive places had more people per km².</li>
+            </ul>
+          </div>
+          <p>Among former colonies, both proxies are <strong>negatively</strong> related to GDP per capita today: places that were more urbanised or densely populated in 1500 are poorer today. Two independent proxies give the same answer, so the reversal is robust.</p>
+          <div class="callout exam">
+            <span class="label">Why this is evidence against geography</span>
+            <p>Geography is fixed. If geography made places rich in 1500, it should keep them rich. Instead the ranking flipped, and the timing matches the change in institutions brought by colonisation. Something that changed must explain a change in outcomes; geography did not change.</p>
+          </div>
+          <p><strong>Settler-mortality interpretation:</strong> in places with high European mortality (tropical disease), few Europeans settled; colonisers extracted resources and built extractive institutions. In temperate, low-mortality places, many Europeans settled and demanded secure property rights, leading to more inclusive institutions. Dense, organised societies had labour and taxes to capture, so colonisers took over existing tribute systems; sparsely populated lands attracted settlers who farmed themselves.</p>
+          <p><strong>Critique:</strong> Albouy (2012) argues that many settler-mortality rates were not measured locally, were assigned from neighbouring countries, or came from soldiers on campaigns with unusually high death rates. After corrections, the mortality–institutions relationship becomes weaker. The authors reply that their main results survive reasonable corrections, and the reversal-of-fortune evidence does not rely on mortality data.</p>
+          <p><strong>Singapore as a tropical colony:</strong> about 1,000 inhabitants when the British arrived in 1819; no mines, plantations or dense population to tax or force into labour. Britain wanted a free port on the Straits of Malacca; merchants needed secure property and enforced contracts. Sparsely populated before colonisation, rich today — exactly the pattern of the reversal.</p>
+
+          <h3 id="s11-8">11.8 Political institutions and creative destruction</h3>
+          <p>Political institutions shape who makes the rules and therefore the economic institutions and incentives. North Korea: power concentrated in one ruling family. South Korea: autocratic take-off with market institutions, democratic since the late 1980s.</p>
+          <div class="callout definition">
+            <span class="label">Political creative destruction</span>
+            <p>Economic progress creates new technologies, businesses and economic winners. New winners may challenge existing firms and elites, threatening political power. Elites who benefit from existing institutions may resist innovations that threaten their wealth or power. That is why extractive institutions persist even though they slow growth.</p>
+          </div>
+          <p><strong>Democratisation</strong> broadens political participation. The evidence suggests GDP per capita falls about 10% before democratisation (democratisations often follow crises), little change in the first years, then a steady rise, ending about 20% higher after 25 years. Examples: South Korea (1987), Czechoslovakia (1989), Indonesia (1998).</p>
+          <p>Inclusive economic institutions allowed the Industrial Revolution to take hold in England in the late 18th century and the US in the 19th: inventors and entrepreneurs could expect to keep the returns from new machines and factories, and elites did not block the creative destruction.</p>
+
+          <h3 id="s11-9">11.9 Foreign aid and RCTs</h3>
+          <div class="split">
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">The case for aid (Sachs)</span>
+              <p>Poor countries lack the capital, schools, health systems and infrastructure they need to start growing. Increased Western aid can fill those gaps. If the problem is missing resources, aid is the natural solution.</p>
+            </div>
+            <div class="callout definition" style="margin-top:0;">
+              <span class="label">The sceptics (Moyo and others)</span>
+              <p>More than $1 trillion of aid has gone to Africa, yet most recipients are not better off, and some are worse off. Aid can be captured or entrench bad institutions.</p>
+            </div>
+          </div>
+          <p><strong>Three reasons macro aid has disappointed:</strong></p>
+          <ol class="clean-list">
+            <li><strong>Too small:</strong> aid is not large enough to raise physical capital and education substantially, and it does little for technology or production efficiency.</li>
+            <li><strong>Captured:</strong> much aid is taken by corrupt officials. In Uganda in the 1990s, only about 13% of education grants reached schools.</li>
+            <li><strong>Entrenches:</strong> aid given within extractive institutions can go to dictators, strengthening their power and the institutions that keep countries poor.</li>
+          </ol>
+          <div class="callout example">
+            <span class="label">RCTs: change the question</span>
+            <p>The 2019 Nobel Prize went to Banerjee, Duflo and Kremer for an experimental approach. Instead of asking "Does aid work?", ask "Does this specific programme work, and how well?" Randomly assign a programme to some villages, schools or households and compare with a control group.</p>
+            <ul style="margin-bottom:0;">
+              <li><strong>Deworming in Kenya:</strong> cut absenteeism by about a quarter, helped untreated children nearby, and cost about $3.50 per extra year of schooling.</li>
+              <li><strong>Audits vs community monitoring in Indonesia:</strong> raising the chance of a government audit from 4% to 100% cut missing funds by about 8 percentage points; inviting villagers to monitoring meetings had little effect.</li>
+            </ul>
+          </div>
+          <p><strong>Strengths:</strong> credible causal evidence on specific programmes; better targeting of limited aid; designs that are harder to capture.</p>
+          <p><strong>Limits:</strong> external validity (results may not transfer); you cannot randomise a country's institutions, so RCTs do not test the fundamental causes directly; improving lives is not the same as generating sustained growth.</p>
+
+          <h3 id="s11-10">11.10 Singapore's transformation</h3>
+          <p>In 1965 Singapore had a small domestic market, about 1.9 million people, few natural resources, high unemployment and low income. It still industrialized.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Fundamental causes (inclusive institutions)</th><th>Proximate causes (K, H, A)</th></tr></thead>
+              <tbody>
+                <tr><td>Secure property and rule of law; predictable rules for investors and contracts.</td><td>Physical capital: high saving and investment; port, Jurong industrial estates, utilities, MRT.</td></tr>
+                <tr><td>Low corruption: CPIB and a merit-based civil service.</td><td>Human capital: universal schooling, technical education, SkillsFuture.</td></tr>
+                <tr><td>Open to trade and investment: Economic Development Board courts MNCs.</td><td>Technology: imported through MNCs (electronics, semiconductors), later home-grown R&amp;D.</td></tr>
+                <tr><td>Capable state: housing, infrastructure and schooling at scale.</td><td>Outcome: higher productivity and sustained growth.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Institutions created the incentives; accumulating K, H and A delivered the growth.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 11 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Distinguish proximate and fundamental causes and explain the causal chain.</li>
+              <li>Evaluate geography, culture and institutions using the Koreas, Austria/Czechoslovakia and the reversal of fortune.</li>
+              <li>Use the entrepreneurship model: return curve shifts vs cost line shifts.</li>
+              <li>Explain inclusive vs extractive institutions and political creative destruction.</li>
+              <li>Explain why aid has disappointed and what RCTs can and cannot show.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-institutions">Back to top ↑</a>
+        </section>
+
+        <!-- ================= CHAPTER 12 ================= -->
+        <section class="chapter" id="ch-policy">
+          <span class="week-chip">Week 11 + Week 12 final review · Booms, Busts and the Policy Response</span>
+          <h2><span class="ch-no">Chapter 12</span>Booms, Busts &amp; Policy</h2>
+          <p class="chapter-lede">Growth theory explains the trend; this chapter explains the wiggles around it. Recessions start with demand or supply shocks, multipliers amplify them, and countercyclical policy leans against the cycle. For every tool, track output, jobs and inflation.</p>
+
+          <h3 id="s12-1">12.1 The business cycle</h3>
+          <p><strong>Potential (trend) GDP</strong> is the output the economy can sustain with workers and machines at normal rates. It rises slowly as K, H and A grow. <strong>Actual GDP</strong> fluctuates around it.</p>
+          <div class="callout definition">
+            <span class="label">Anatomy</span>
+            <ul style="margin-bottom:0;">
+              <li><strong>Recession:</strong> a significant decline in economic activity; common rule: two consecutive quarters of declining real GDP. Unemployment rises.</li>
+              <li><strong>Expansion:</strong> a period of positive growth between recessions.</li>
+              <li><strong>Peak:</strong> the high point. <strong>Trough:</strong> the low point, where unemployment is near its highest.</li>
+            </ul>
+          </div>
+          <p>Singapore's recessions are rare but sharp: 1985 (costs too high and building boom ended), 1998 (Asian Financial Crisis), 2001 (dot-com bust), 2008–09 (Global Financial Crisis; annual growth stayed positive but GDP fell for several quarters), 2020 (COVID-19, −3.6%). Most were imported shocks to a very open economy.</p>
+
+          <h3 id="s12-2">12.2 Three properties of fluctuations</h3>
+          <ol class="clean-list">
+            <li><strong>Co-movement:</strong> output, consumption, investment and employment move together; unemployment moves opposite. Investment is the most volatile component because projects can be postponed. Singapore Q2 2020: real GDP fell 13% year-on-year; consumption fell 28%, investment 27%, employment fell by 121,800, unemployment rose from 2.4% to 2.9%.</li>
+            <li><strong>Limited predictability:</strong> turning points are hard to forecast because shocks are unexpected. In November 2019, MTI forecast positive 2020 growth; by August 2020 it forecast −7% to −5%. During the Great Depression, Irving Fisher said share prices had reached a "permanently high plateau" just before the 1929 crash.</li>
+            <li><strong>Persistence:</strong> growth tends to be followed by growth, contraction by contraction. The Great Depression: output fell four years in a row and did not regain its 1929 level until 1936; unemployment was still 15% in 1940.</li>
+          </ol>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Procyclical (moves with GDP)</th><th>Countercyclical (moves against GDP)</th></tr></thead>
+              <tbody>
+                <tr><td>Consumption</td><td>Unemployment rate</td></tr>
+                <tr><td>Investment</td><td>Retrenchments</td></tr>
+                <tr><td>Imports</td><td>Jobseekers per vacancy</td></tr>
+                <tr><td>Employment</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 id="s12-3">12.3 Demand and supply shocks</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Shock</th><th>What happens</th><th>Output</th><th>Unemployment</th><th>Inflation</th></tr></thead>
+              <tbody>
+                <tr><td>Negative demand</td><td>Spending falls; firms sell less</td><td>↓</td><td>↑</td><td>↓</td></tr>
+                <tr><td>Negative supply</td><td>Production becomes costlier</td><td>↓</td><td>↑</td><td>↑</td></tr>
+                <tr><td>Positive demand</td><td>Spending rises</td><td>↑</td><td>↓</td><td>↑</td></tr>
+                <tr><td>Positive supply</td><td>Costs fall or productivity rises</td><td>↑</td><td>↓</td><td>↓</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Both negative shocks cause a recession. The difference shows up in <strong>inflation</strong>: demand shocks move output and inflation in the same direction; supply shocks move them in opposite directions.</p>
+          <div class="callout example">
+            <span class="label">2020: both at once</span>
+            <p>COVID-19 was both a demand and a supply shock. Households avoided crowded places (demand); workplaces and building sites closed, and safe distancing cut what each worker could produce (supply). Borders closed, tourism collapsed, and trading partners locked down, so exports fell. Real GDP fell 13% in Q2 2020 versus a year earlier; jobs were lost across the economy.</p>
+          </div>
+
+          <h3 id="s12-4">12.4 The labour market and wage rigidity</h3>
+          <p>Labour demand slopes down: a firm hires a worker only if what the worker produces is worth at least the wage. Labour supply slopes up, then becomes vertical once everyone who can work is working.</p>
+          <p>Labour demand shifts when output prices change, demand for the firm's output changes, technology changes, or the prices of other inputs change. A recession begins with a negative shift in labour demand.</p>
+          <div class="callout definition">
+            <span class="label">Downward rigidity</span>
+            <p>If the wage cannot fall to the market-clearing level, firms hire only up to labour demand. More people want jobs than there are jobs, so the gap becomes unemployment. The adjustment shows up as lost jobs, not lower pay.</p>
+            <p>What keeps wages up: minimum wage laws (Singapore's Progressive Wage floors in cleaning and security), unions, firms paying more to retain workers, and workers resisting pay cuts.</p>
+          </div>
+          <p><strong>Singapore's flexibility measures</strong> lower what each worker costs the firm without cutting take-home pay:</p>
+          <ol class="clean-list">
+            <li><strong>Employer CPF cuts:</strong> firms pay less into workers' CPF for a while.</li>
+            <li><strong>Flexible wages:</strong> part of pay is a variable bonus that falls in bad years; pay rises can be paused.</li>
+            <li><strong>Wage subsidies:</strong> the government pays part of each worker's wage, e.g., the Jobs Support Scheme in 2020.</li>
+          </ol>
+
+          <h3 id="s12-5">12.5 Multipliers and open-economy transmission</h3>
+          <p>A <strong>multiplier</strong> means an initial fall in spending triggers further falls, so the total effect is larger than the shock. Households spend less → firms sell less and cut production → firms lay off workers → households earn less → they spend less, and so on.</p>
+          <div class="callout example">
+            <span class="label">A shock from abroad</span>
+            <p>Fewer tourists visit Singapore → hotels, airlines and shops sell less (X ↓) → firms cut output and investment (I ↓) → layoffs raise unemployment → incomes fall, consumption falls (C ↓) → imports also fall (M ↓), partly offsetting the fall in GDP. Three components of GDP fall, then the multiplier amplifies the shock. In a very open economy, a recession abroad quickly becomes a recession at home.</p>
+          </div>
+          <p>The 2008–09 Global Financial Crisis spread through banks and trade; Singapore responded with the S$20.5 billion Resilience Package in Budget 2009. The 2025 US tariffs were expected to hit demand, but growth came in at about 5%: firms rushed orders ahead of the tariffs, semiconductors and medicines were initially excluded, and the demand hit was smaller than feared. Limited predictability again.</p>
+
+          <h3 id="s12-6">12.6 Booms and overheating</h3>
+          <p>In a boom, spending rises or productivity jumps. Firms sell more, hire more, and unemployment falls. Before full employment, more demand mostly means more jobs and output. At full employment, more demand mostly means higher wages and prices — overheating.</p>
+          <p>Singapore 2010–11: output grew about 15% in 2010 as world demand recovered; firms struggled to hire, and inflation passed 5% in 2011. Policymakers then acted to slow spending.</p>
+
+          <h3 id="s12-7">12.7 Countercyclical policy</h3>
+          <div class="callout definition">
+            <span class="label">Countercyclical</span>
+            <p><strong>Counter</strong> means against; <strong>cyclical</strong> refers to the business cycle. Countercyclical policy heats up a slump and cools down a boom, reducing the size of fluctuations. Procyclical policy does the opposite and makes swings bigger.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th></th><th>Expansionary (recession)</th><th>Contractionary (overheating boom)</th></tr></thead>
+              <tbody>
+                <tr><td>Fiscal: G</td><td>Spend more</td><td>Spend less</td></tr>
+                <tr><td>Fiscal: taxes</td><td>Cut taxes</td><td>Raise taxes</td></tr>
+                <tr><td>Fiscal: transfers</td><td>Increase transfers/subsidies</td><td>Cut transfers/subsidies</td></tr>
+                <tr><td>Monetary: interest rate (Fed)</td><td>Lower rates (buy bonds)</td><td>Raise rates (sell bonds)</td></tr>
+                <tr><td>Monetary: exchange rate (MAS)</td><td>S$ strengthens more slowly, or weakens</td><td>S$ strengthens faster</td></tr>
+                <tr><td>Result</td><td>Output ↑, jobs ↑, inflation ↑</td><td>Output ↓, jobs ↓, inflation ↓</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 id="s12-8">12.8 Monetary policy: interest rates</h3>
+          <p>A <strong>bond</strong> is a loan you can buy and sell. The central bank buys or sells government bonds to change the cash held by banks.</p>
+          <ul class="clean-list">
+            <li><strong>Expansionary:</strong> central bank buys bonds → banks have more cash → interest rates fall → cheaper car, home and business loans → borrowing and spending rise → output, jobs and inflation rise.</li>
+            <li><strong>Contractionary:</strong> central bank sells bonds → banks have less cash → interest rates rise → borrowing and spending fall → output, jobs and inflation fall.</li>
+          </ul>
+          <div class="callout formula">
+            <span class="label">Real interest rate</span>
+            <p class="formula-line">Expected real interest rate ≈ nominal interest rate − expected inflation</p>
+            <p>If a loan charges 5% and prices are expected to fall 2%, the real rate is 5% − (−2%) = 7%. Expected deflation makes borrowing more expensive in real terms, so spending falls further — one reason central banks fear deflation.</p>
+          </div>
+
+          <h3 id="s12-9">12.9 Monetary policy: the exchange rate (MAS)</h3>
+          <p>MAS steers the <strong>S$NEER</strong>: the Singapore dollar nominal effective exchange rate — an average against a trade-weighted basket of currencies, kept inside a policy band. MAS buys or sells S$ to keep it in the band.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>S$ move</th><th>Imports</th><th>Exports</th><th>Output / jobs</th><th>Inflation</th></tr></thead>
+              <tbody>
+                <tr><td>Stronger</td><td>Cheaper in S$</td><td>More expensive abroad</td><td>↓</td><td>↓</td></tr>
+                <tr><td>Weaker</td><td>More expensive in S$</td><td>Cheaper abroad</td><td>↑</td><td>↑</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="clean-list">
+            <li><strong>Expansionary:</strong> MAS lets the S$ strengthen more slowly, or weaken. Exports become cheaper abroad and imports more expensive. Output ↑, jobs ↑, inflation ↑. Example: March 2020, MAS stopped letting the S$ strengthen as COVID-19 loomed; January and April 2025, it let the S$ rise more slowly as growth slowed.</li>
+            <li><strong>Contractionary:</strong> MAS lets the S$ strengthen faster. Imports become cheaper, exports more expensive. Output ↓, jobs ↓, inflation ↓. Example: October 2021 to October 2022, MAS let the S$ strengthen faster five times as inflation surged.</li>
+          </ul>
+          <div class="callout note">
+            <span class="label">Why Singapore uses the exchange rate</span>
+            <p>The US has trade at about 25% of GDP and buys mostly its own goods; it steers the price of borrowing. Singapore has trade at about 326% of GDP, imports much of what it consumes, and money flows freely, so interest rates follow world rates. It steers the price of its currency. The rule: when money flows freely across borders, a central bank can control its interest rate or its exchange rate, but not both.</p>
+          </div>
+
+          <h3 id="s12-10">12.10 Fiscal policy</h3>
+          <p><strong>Fiscal policy</strong> uses government spending (G), taxes (T) and transfers/subsidies.</p>
+          <ul class="clean-list">
+            <li><strong>Expansionary:</strong> spend more, cut taxes, increase transfers. People have more money, firms sell more and hire more, and the multiplier amplifies the effect. Output ↑, jobs ↑, inflation ↑.</li>
+            <li><strong>Contractionary:</strong> spend less, raise taxes, cut transfers. Output ↓, jobs ↓, inflation ↓.</li>
+          </ul>
+          <div class="callout example">
+            <span class="label">Singapore 2020</span>
+            <p>Five Budgets committed about S$97 billion, close to 20% of GDP, mostly cash payouts, wage subsidies and loans. The Jobs Support Scheme covered 25–75% of the first S$4,600 of each local worker's monthly wage; an estimated 155,000 jobs were saved or created on average in 2020–21. Expansionary fiscal policy on a large scale, paid from reserves rather than borrowing.</p>
+          </div>
+          <p>Two labour-market tools are worth distinguishing. <strong>Wage subsidies</strong> (Jobs Support Scheme, 2020) keep workers in jobs by lowering the cost of employing them. <strong>Unemployment support</strong> (Jobseeker Support, 2025) helps those who lose jobs: up to S$6,000 over six months for workers who actively look for work. It keeps up spending, but if too generous it could slow job search.</p>
+          <p><strong>Policy lags:</strong> recognising a recession, deciding and implementing take time. Infrastructure takes years; cash transfers are faster. Badly timed stimulus can arrive after recovery and overheat the economy. <strong>Policy waste:</strong> spending chosen for votes rather than value may do little for the economy.</p>
+
+          <h3 id="s12-11">12.11 Demand vs supply shocks: the policy trade-off</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Shock</th><th>Stimulate</th><th>Tighten</th></tr></thead>
+              <tbody>
+                <tr><td>Negative demand</td><td>Jobs ✓, inflation ✓ (moves back to normal)</td><td>Jobs ✗, inflation ✗</td></tr>
+                <tr><td>Negative supply</td><td>Jobs ✓, inflation ✗ (worse)</td><td>Inflation ✓, jobs ✗ (worse)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>With a demand shock, expansionary policy can improve both unemployment and inflation: no hard trade-off. With a supply shock, policy must choose between fighting unemployment and fighting inflation. Singapore's usual answer is to let the S$ strengthen to cut imported inflation while the Budget supports the hardest-hit households.</p>
+          <div class="callout example">
+            <span class="label">Classify the package</span>
+            <p>(a) MAS lets the S$ strengthen faster while the government trims spending: contractionary monetary + contractionary fiscal → output ↓, jobs ↓, inflation ↓. (b) MAS lets the S$ weaken while the government cuts GST: expansionary + expansionary → output ↑, jobs ↑, inflation ↑. (c) The Fed raises rates while the government increases transfers: contractionary monetary + expansionary fiscal → ambiguous net effect.</p>
+          </div>
+
+          <h3 id="s12-12">12.12 The final-review policy framework</h3>
+          <p>The professor's final review reduced fiscal and monetary policy to one table. Learn this and you can answer most policy questions.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Tool</th><th>Expansionary</th><th>Contractionary</th><th>Output</th><th>Jobs</th><th>Inflation</th></tr></thead>
+              <tbody>
+                <tr><td>Fiscal</td><td>G ↑, T ↓, transfers ↑</td><td>G ↓, T ↑, transfers ↓</td><td>↑ / ↓</td><td>↑ / ↓</td><td>↑ / ↓</td></tr>
+                <tr><td>Fed interest rate</td><td>Rates ↓ (buy bonds)</td><td>Rates ↑ (sell bonds)</td><td>↑ / ↓</td><td>↑ / ↓</td><td>↑ / ↓</td></tr>
+                <tr><td>MAS exchange rate</td><td>S$ strengthens more slowly / weakens</td><td>S$ strengthens faster</td><td>↑ / ↓</td><td>↑ / ↓</td><td>↑ / ↓</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Every expansionary tool raises output, jobs and inflation. Every contractionary tool lowers all three. The art is choosing the right direction for the state of the economy, and recognizing when a supply shock forces a trade-off.</p>
+
+          <div class="callout exam">
+            <span class="label">Chapter 12 exam checklist</span>
+            <ul class="check-list" style="margin-bottom:0;">
+              <li>Identify recession, expansion, peak and trough; state the technical recession rule.</li>
+              <li>Classify shocks and predict output, unemployment and inflation.</li>
+              <li>Explain wage rigidity and Singapore's three flexibility measures.</li>
+              <li>Trace the multiplier and open-economy transmission.</li>
+              <li>Classify fiscal and monetary tools as expansionary/contractionary and predict all three macro variables.</li>
+              <li>Explain the demand-shock vs supply-shock policy trade-off.</li>
+            </ul>
+          </div>
+          <a class="back-to-top" href="#ch-policy">Back to top ↑</a>
+        </section>
+
+        <!-- ================= FINAL PLAN ================= -->
+        <section class="chapter" id="ch-plan">
+          <span class="week-chip">Final 48 hours</span>
+          <h2><span class="ch-no">Last mile</span>The 48-hour plan</h2>
+          <p class="chapter-lede">Do not reread everything. Retrieve, correct, and simulate. The exam rewards accurate application, not familiarity.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>When</th><th>What</th><th>Why</th></tr></thead>
+              <tbody>
+                <tr><td>48–36 hours</td><td>Read Chapters 1–7; after each, do 10 mixed questions on that topic.</td><td>Rebuild the micro toolkit and fix elasticity/tax/price-control confusion.</td></tr>
+                <tr><td>36–24 hours</td><td>Read Chapters 8–12; after each, do 10 mixed questions.</td><td>Rebuild the macro chain: measurement → productivity → growth → institutions → policy.</td></tr>
+                <tr><td>24–12 hours</td><td>Copy the <a href="cheatsheet.html">formula sheet</a> onto your A4 by hand. Then sit one full exam.</td><td>Handwriting the sheet is retrieval practice; the full exam is timing practice.</td></tr>
+                <tr><td>12–2 hours</td><td>Review only wrong answers and the "Top traps" list. Do 10 hard questions.</td><td>Stop widening; consolidate.</td></tr>
+                <tr><td>Night before</td><td>Sleep. No new topics.</td><td>The exam is applied, not memorization-heavy.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="split">
+            <div class="callout exam" style="margin-top:0;">
+              <span class="label">MCQ strategy</span>
+              <ul style="margin-bottom:0;">
+                <li>Eliminate two options first; then compare the remaining two on units and direction.</li>
+                <li>If a graph has axes in thousands, write the conversion next to it immediately.</li>
+                <li>If the question says "per unit", do not compute a total.</li>
+                <li>Do not leave blanks. Flag and return.</li>
+              </ul>
+            </div>
+            <div class="callout exam" style="margin-top:0;">
+              <span class="label">Written strategy</span>
+              <ul style="margin-bottom:0;">
+                <li>Start with the formula or definition, even if you cannot finish the calculation.</li>
+                <li>Show substitution; method marks are real.</li>
+                <li>Add one interpretation sentence: "This means… because…".</li>
+                <li>If asked to "explain", use a mechanism, not just a definition: cause → effect → outcome.</li>
+              </ul>
+            </div>
+          </div>
+          <a class="back-to-top" href="#ch-plan">Back to top ↑</a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Reorganized notes · 12 chapters · sources: Week 1–12 slides, quizzes, midterm practice and final review</span>
+    <span><a href="practice.html">Practice this chapter →</a></span>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/notes.js"></script>
+</body>
+</html>
