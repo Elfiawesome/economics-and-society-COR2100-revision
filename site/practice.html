@@ -24,7 +24,7 @@
     <div class="page-head">
       <div class="eyebrow" style="color:var(--muted); margin-bottom:10px;">Practice mode</div>
       <h1>Infinite questions.</h1>
-      <p>Every numerical question is generated fresh: new values, companies, countries and scenarios. Theory and application questions are mixed in. Answer, reveal the full solution, and the site tracks your weak topics locally in your browser.</p>
+      <p>Every numerical question is generated fresh: new values, companies, countries and scenarios. Theory and application questions are mixed in. Answer, reveal the full solution, and the site tracks your weak topics locally in your browser. Turn on <strong>Graphs &amp; diagrams only</strong> for labelled-area questions on monopoly, tax, price controls, externalities, labour markets, demand shifts and elasticity.</p>
     </div>
 
     <div class="practice-layout">
@@ -53,6 +53,7 @@
             <option value="hard">Hard</option>
           </select>
         </div>
+        <label class="check-row"><input type="checkbox" id="graphOnly"> Graphs &amp; diagrams only</label>
         <div class="btn-row">
           <button class="btn primary" id="newBtn" type="button">New question</button>
           <button class="btn small" id="resetBtn" type="button">Reset stats</button>
@@ -96,6 +97,7 @@
   <script src="js/gen-government.js"></script>
   <script src="js/gen-macro.js"></script>
   <script src="js/gen-institutions-policy.js"></script>
+  <script src="js/gen-graphs.js"></script>
   <script src="js/practice.js"></script>
 </body>
 </html>

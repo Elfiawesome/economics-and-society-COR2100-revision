@@ -5,6 +5,7 @@
   const topicSelect = $("topicSelect");
   const typeSelect = $("typeSelect");
   const difficultySelect = $("difficultySelect");
+  const graphOnly = $("graphOnly");
   const newBtn = $("newBtn");
   const resetBtn = $("resetBtn");
   const stage = $("qStage");
@@ -38,6 +39,7 @@
     if (requestedType === "mcq" || requestedType === "written") typeSelect.value = requestedType;
     const requestedDiff = params.get("difficulty");
     if (["easy", "medium", "hard"].includes(requestedDiff)) difficultySelect.value = requestedDiff;
+    if (params.get("graphs") === "1") graphOnly.checked = true;
   } catch (e) {
     /* ignore malformed URL */
   }
@@ -104,19 +106,28 @@
     const typeChoice = typeSelect.value;
     const type = typeChoice === "mixed" ? EQS.pick(["mcq", "written"]) : typeChoice;
     const difficulty = difficultySelect.value;
-    let q = EQS.generateOne({
-      topics: topic === "mixed" ? EQS.TOPIC_IDS : [topic],
-      type: type,
-      difficulty: difficulty,
-      excludePrompts: new Set(recent)
-    });
-    if (!q) {
+    const topics = topic === "mixed" ? null : [topic];
+    const exclude = new Set(recent);
+    let q;
+    if (graphOnly.checked) {
+      q = EQS.generateGraph(type, difficulty, exclude, new Set(), topics);
+      if (!q && difficulty !== "mixed") q = EQS.generateGraph(type, "mixed", exclude, new Set(), topics);
+      if (!q) q = EQS.generateGraph(type, "mixed", exclude, new Set());
+    } else {
       q = EQS.generateOne({
         topics: topic === "mixed" ? EQS.TOPIC_IDS : [topic],
         type: type,
-        difficulty: "mixed",
-        excludePrompts: new Set(recent)
+        difficulty: difficulty,
+        excludePrompts: exclude
       });
+      if (!q) {
+        q = EQS.generateOne({
+          topics: topic === "mixed" ? EQS.TOPIC_IDS : [topic],
+          type: type,
+          difficulty: "mixed",
+          excludePrompts: exclude
+        });
+      }
     }
     if (!q) {
       stage.innerHTML = '<div class="q-card"><div class="q-title">No question generated</div><p>Try another topic or difficulty.</p></div>';
@@ -311,6 +322,7 @@
   typeSelect.addEventListener("change", generate);
   topicSelect.addEventListener("change", generate);
   difficultySelect.addEventListener("change", generate);
+  graphOnly.addEventListener("change", generate);
   resetBtn.addEventListener("click", () => {
     if (!window.confirm("Reset all practice statistics?")) return;
     stats = { attempts: 0, score: 0, streak: 0, best: 0, topics: {} };

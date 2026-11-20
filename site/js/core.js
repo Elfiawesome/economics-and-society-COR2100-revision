@@ -222,6 +222,7 @@
       supports: def.supports || ["mcq", "written"],
       source: def.source || "",
       static: !!def.static,
+      graph: !!def.graph,
       gen: def.gen
     };
     EQS.registry.push(entry);
@@ -369,16 +370,9 @@
     return null;
   };
 
-  EQS.generateForTopic = function (topic, type, diff, excludePrompts, excludeIds) {
-    let pool = EQS.registry.filter(
-      (e) => e.topic === topic && e.supports.indexOf(type) >= 0 && (diff === "mixed" || e.difficulty === diff)
-    );
-    if (!pool.length) {
-      pool = EQS.registry.filter((e) => e.topic === topic && e.supports.indexOf(type) >= 0);
-    }
-    if (!pool.length) return null;
-    const entries = EQS.shuffle(pool);
-    for (const entry of entries) {
+  EQS._generateFromEntries = function (entries, type, excludePrompts, excludeIds) {
+    const shuffled = EQS.shuffle(entries);
+    for (const entry of shuffled) {
       if (entry.static && excludeIds.has(entry.id)) continue;
       for (let attempt = 0; attempt < 14; attempt++) {
         let q;
@@ -396,6 +390,7 @@
           entryId: entry.id,
           mode: entry.mode,
           static: entry.static,
+          graph: !!(q.graph || entry.graph),
           type: type,
           topic: entry.topic,
           subtopic: q.subtopic || entry.subtopic,
@@ -408,6 +403,32 @@
       }
     }
     return null;
+  };
+
+  EQS.generateForTopic = function (topic, type, diff, excludePrompts, excludeIds) {
+    let pool = EQS.registry.filter(
+      (e) => e.topic === topic && e.supports.indexOf(type) >= 0 && (diff === "mixed" || e.difficulty === diff)
+    );
+    if (!pool.length) {
+      pool = EQS.registry.filter((e) => e.topic === topic && e.supports.indexOf(type) >= 0);
+    }
+    if (!pool.length) return null;
+    return EQS._generateFromEntries(pool, type, excludePrompts, excludeIds);
+  };
+
+  EQS.generateGraph = function (type, diff, excludePrompts, excludeIds, topics) {
+    let pool = EQS.registry.filter(
+      (e) => e.graph && e.supports.indexOf(type) >= 0 &&
+        (!topics || topics.indexOf(e.topic) >= 0) &&
+        (diff === "mixed" || e.difficulty === diff)
+    );
+    if (!pool.length) {
+      pool = EQS.registry.filter(
+        (e) => e.graph && e.supports.indexOf(type) >= 0 && (!topics || topics.indexOf(e.topic) >= 0)
+      );
+    }
+    if (!pool.length) return null;
+    return EQS._generateFromEntries(pool, type, excludePrompts || new Set(), excludeIds || new Set());
   };
 
   EQS.distribute = function (total, n) {
@@ -464,8 +485,26 @@
       return deficit;
     }
 
+    function ensureGraphs(list, type, minCount) {
+      let count = list.filter((q) => q.graph).length;
+      let guard = 0;
+      while (count < minCount && guard++ < minCount * 15) {
+        const q = EQS.generateGraph(type, difficulty, usedPrompts, usedStatic, topics);
+        if (!q) break;
+        const candidates = list.map((x, i) => ({ q: x, i: i })).filter((x) => !x.q.graph);
+        if (!candidates.length) break;
+        const victim = EQS.pick(candidates);
+        usedPrompts.add(q.key);
+        if (q.static) usedStatic.add(q.entryId);
+        list[victim.i] = q;
+        count++;
+      }
+    }
+
     fill(mcqs, "mcq", mcqCount);
     fill(writtens, "written", writtenCount);
+    ensureGraphs(mcqs, "mcq", mcqCount >= 20 ? 3 : 1);
+    ensureGraphs(writtens, "written", writtenCount >= 20 ? 2 : 1);
     return {
       mcqs: EQS.shuffle(mcqs),
       writtens: EQS.shuffle(writtens),

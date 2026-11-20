@@ -313,6 +313,22 @@ kbd {
   color: var(--muted);
 }
 
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  margin: 0 0 14px;
+  cursor: pointer;
+}
+
+.check-row input {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
 input[type="text"],
 input[type="number"],
 select,
@@ -524,6 +540,86 @@ sup, sub {
   font-size: 0.8rem;
   color: var(--muted);
   margin-top: -10px;
+}
+
+/* ---------- question graphs ---------- */
+.q-graph {
+  margin: 16px 0 18px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 10px 10px 8px;
+}
+
+.q-graph svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.q-graph figcaption {
+  border-top: 1px solid var(--soft-line);
+  margin-top: 8px;
+  padding-top: 6px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.q-graph svg text {
+  font-family: var(--mono);
+  font-size: 11px;
+  fill: var(--ink);
+}
+
+.q-graph svg .lbl {
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+.q-graph svg .area-label {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.q-graph svg .axis {
+  stroke: var(--ink);
+  stroke-width: 1.2;
+}
+
+.q-graph svg .curve {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.8;
+}
+
+.q-graph svg .curve-accent {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.8;
+}
+
+.q-graph svg .dash {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+}
+
+.q-graph svg .shade {
+  fill: #f0d6cf;
+  stroke: var(--accent);
+  stroke-width: 1;
+}
+
+.q-graph svg .shade-soft {
+  fill: #ece6d7;
+  stroke: var(--soft-line);
+  stroke-width: 1;
+}
+
+.q-graph svg .point {
+  fill: var(--ink);
 }
 
 /* ---------- details ---------- */

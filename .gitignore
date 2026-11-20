@@ -1,0 +1,6 @@
+.venv/
+node_modules/
+extracted/
+.server.pid
+__pycache__/
+*.log
