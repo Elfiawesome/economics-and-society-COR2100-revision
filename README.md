@@ -2,6 +2,24 @@
 
 Static study site built from the Week 1–12 slides, weekly quizzes, Week 8 midterm practice, Week 12 final review and transcript.
 
+## Live site (GitHub Pages)
+
+The site publishes from `site/` through `.github/workflows/pages.yml`. Once Pages is enabled, the URL should be:
+
+**https://elfiawesome.github.io/economics-and-society-COR2100-revision/**
+
+To enable it the first time:
+
+1. Push the commit containing `.github/workflows/pages.yml`, `site/.nojekyll` and the site files.
+2. Open the repository on GitHub → **Settings** → **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Open the **Actions** tab → **Deploy static site to GitHub Pages** → **Run workflow** (a push to `master`/`main` also triggers it).
+5. Wait for the deployment to finish. The live URL appears in the deployment and in **Settings → Pages**.
+
+The workflow uploads the `site/` folder directly, so there is no build step, no `node_modules` on Pages, and no duplicated `docs/` folder. The site uses relative links, so it works correctly under the repository subpath (`/<repo-name>/`).
+
+If Pages is currently set to “Deploy from a branch”, switch it to **GitHub Actions**; otherwise the workflow will not publish.
+
 ## Run it
 
 No npm packages are required to run the site. From the project root:
@@ -58,7 +76,9 @@ Each question is worth 2 marks in the simulator. MCQs are auto-marked. Written a
 ## Project layout
 
 ```
+.github/workflows/pages.yml   # GitHub Pages deployment
 site/
+  .nojekyll
   index.html
   notes.html
   practice.html
