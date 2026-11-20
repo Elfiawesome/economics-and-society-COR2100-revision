@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Question Bank — E&amp;S Final</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' fill='%23f3f0e8' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><strong>E&amp;S</strong><span>Final Year / Study System</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="notes.html">Notes</a>
+        <a href="questions.html" class="active">Question Bank</a>
+        <a href="practice.html">Infinite Practice</a>
+        <a href="exam.html">Exam Simulator</a>
+        <a href="cheatsheet.html">Formula Sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="page-head">
+      <div class="eyebrow" style="color:var(--muted); margin-bottom:10px;">Complete inventory</div>
+      <h1>All question types.<br>One list.</h1>
+      <p>Every MCQ and written question type in the generator, grouped by topic. Fixed bank questions show the exact question; generated templates show one sample and can produce new values, companies, graphs or labels on demand. Expand any entry to see the question, answer and solution.</p>
+    </div>
+
+    <div class="bank-summary-grid" id="bankSummary"></div>
+
+    <section class="panel" style="margin-bottom:22px;">
+      <div class="section-head" style="margin-bottom:14px;">
+        <div>
+          <div class="eyebrow" style="color:var(--muted);">Coverage by topic</div>
+          <h2 style="margin-bottom:0;">What is tested where</h2>
+        </div>
+      </div>
+      <div id="coverageTable"></div>
+      <p class="small-note" style="margin:0;">A generated template can count in both the MCQ and written columns because it produces both formats. “Fixed” means a static bank question; “numeric” includes calculation and graph templates.</p>
+    </section>
+
+    <section class="panel" style="margin-bottom:22px;">
+      <div class="bank-controls">
+        <div class="field" style="grid-column:span 2;">
+          <label for="bankSearch">Search</label>
+          <input type="text" id="bankSearch" placeholder="Search questions, topics, sources…">
+        </div>
+        <div class="field">
+          <label for="bankTopic">Topic</label>
+          <select id="bankTopic"><option value="all">All topics</option></select>
+        </div>
+        <div class="field">
+          <label for="bankType">Format</label>
+          <select id="bankType">
+            <option value="all">MCQ + written</option>
+            <option value="mcq">MCQ only</option>
+            <option value="written">Written only</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bankKind">Question kind</label>
+          <select id="bankKind">
+            <option value="all">All kinds</option>
+            <option value="numeric">Numeric / calculation</option>
+            <option value="theory">Theory bank</option>
+            <option value="application">Application / scenario</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bankDifficulty">Difficulty</label>
+          <select id="bankDifficulty">
+            <option value="all">All difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <label class="check-row" style="grid-column:span 2; margin-bottom:0;">
+          <input type="checkbox" id="bankGraphs"> Graphs &amp; diagrams only
+        </label>
+      </div>
+      <div class="btn-row" style="margin-bottom:12px;">
+        <button class="btn small" id="expandAll" type="button">Expand visible</button>
+        <button class="btn small" id="collapseAll" type="button">Collapse all</button>
+        <span class="hint" id="visibleCount"></span>
+      </div>
+      <div class="bank-list" id="bankList"></div>
+      <p class="small-note" id="bankEmpty" hidden style="margin:14px 0 0;">No question types match those filters.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Question Bank · every registered MCQ and written entry · generated samples are one realization</span>
+    <span><a href="practice.html">Practise these →</a></span>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/bank-micro-mcq.js"></script>
+  <script src="js/bank-macro-mcq.js"></script>
+  <script src="js/bank-written.js"></script>
+  <script src="js/gen-foundations.js"></script>
+  <script src="js/gen-demand.js"></script>
+  <script src="js/gen-consumer-costs.js"></script>
+  <script src="js/gen-monopoly.js"></script>
+  <script src="js/gen-government.js"></script>
+  <script src="js/gen-macro.js"></script>
+  <script src="js/gen-institutions-policy.js"></script>
+  <script src="js/gen-graphs.js"></script>
+  <script src="js/questions.js"></script>
+</body>
+</html>

@@ -56,6 +56,37 @@ log("Loading cheatsheet...");
   dom.window.close();
 }
 
+log("Loading question bank...");
+{
+  const { dom, errors } = await load("questions.html");
+  const w = dom.window;
+  const d = w.document;
+  assert(!!w.EQS, "question bank: EQS missing");
+  assert(d.querySelectorAll("#bankSummary .bank-summary-cell").length === 6, "question bank: summary cells missing");
+  assert(d.querySelectorAll("#coverageTable tbody tr").length === 12, "question bank: coverage table is not per-topic");
+  const items = Array.from(d.querySelectorAll(".bank-item"));
+  assert(items.length > 100, "question bank: expected a large list, got " + items.length);
+  const first = items[0];
+  first.open = true;
+  await sleep(100);
+  assert(!!first.querySelector(".bank-question"), "question bank: expanded item has no question");
+  assert(!!first.querySelector(".bank-option") || !!first.querySelector(".bank-why"), "question bank: expanded item has no answer content");
+  const type = d.getElementById("bankType");
+  type.value = "written";
+  type.dispatchEvent(new w.Event("change", { bubbles: true }));
+  const writtenVisible = items.filter((x) => !x.hidden).length;
+  assert(writtenVisible > 0 && writtenVisible < items.length, "question bank: written filter did not work");
+  type.value = "all";
+  type.dispatchEvent(new w.Event("change", { bubbles: true }));
+  const graphs = d.getElementById("bankGraphs");
+  graphs.checked = true;
+  graphs.dispatchEvent(new w.Event("change", { bubbles: true }));
+  const graphVisible = items.filter((x) => !x.hidden).length;
+  assert(graphVisible > 0 && graphVisible < items.length, "question bank: graph filter did not work");
+  if (errors.length) problems.push(...errors.map((e) => "question bank: " + e));
+  dom.window.close();
+}
+
 log("Loading practice...");
 {
   const { dom, errors } = await load("practice.html");

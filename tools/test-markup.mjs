@@ -3,7 +3,7 @@ import path from "node:path";
 import { JSDOM } from "jsdom";
 
 const site = path.resolve("site");
-const pages = ["index.html", "notes.html", "practice.html", "exam.html", "cheatsheet.html"];
+const pages = ["index.html", "notes.html", "questions.html", "practice.html", "exam.html", "cheatsheet.html"];
 const problems = [];
 
 for (const page of pages) {

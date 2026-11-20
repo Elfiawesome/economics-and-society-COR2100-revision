@@ -36,6 +36,7 @@ You can also open `site/index.html` directly in a browser; the site is fully sta
 
 ## Pages
 
+- `site/questions.html` — Question Bank. A searchable inventory of every MCQ and written question type, with a coverage table by topic, format/kind/difficulty filters, and expandable samples showing the question, options, correct answer, explanation and model answer.
 - `site/notes.html` — all 12 topics reorganized into causal order. Elasticity is consolidated into demand; Week 4 monopoly is merged with the Week 12 final review; Week 7–10 is one growth sequence; Week 11 is one policy framework. Admin slides are removed.
 - `site/cheatsheet.html` — every formula, graph-reading recipe, exam trigger table and trap list, arranged for the handwritten A4 cheat sheet.
 - `site/practice.html` — infinite question generator. Numeric questions get new values, companies and countries; theory and application questions are mixed in. Full solutions and marking checklists. The **Graphs & diagrams only** checkbox (or `practice.html?graphs=1`) drills labelled-area and graph-reading questions.
@@ -81,6 +82,7 @@ site/
   .nojekyll
   index.html
   notes.html
+  questions.html
   practice.html
   exam.html
   cheatsheet.html
@@ -99,6 +101,7 @@ site/
     gen-institutions-policy.js
     gen-graphs.js
     notes.js
+    questions.js
     practice.js
     exam.js
 tools/

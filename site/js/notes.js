@@ -110,6 +110,12 @@
       link.textContent = "Sit the full exam →";
     }
     if (back && back.parentNode) back.parentNode.insertBefore(link, back);
+    const bank = document.createElement("a");
+    bank.className = "btn small";
+    bank.style.marginRight = "8px";
+    bank.href = topic ? "questions.html?topic=" + topic : "questions.html";
+    bank.textContent = "Question bank →";
+    if (back && back.parentNode) back.parentNode.insertBefore(bank, back);
   });
 
   const studyProgress = document.createElement("div");
